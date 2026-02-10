@@ -104,31 +104,6 @@ Crie um componente Price que recebe valor (number) e exibe formatado com R$.
 
 💡 *Dica: const formatado = `R$ ${valor.toFixed(2).replace('.', ',')}`*
 
-
-```jsx
-const Price = ({price}) => {
-const fixedPrice = new Intl.NumberFormat("pt-BR", { 
-	style: "currency", 
-	currency: "BRL", 
-	maximumSignificantDigits: 2 
-}).format(price),
-	return <div>{fixedPrice}</div>;
-}
-export default Price;
-
-// OU
-
-const Price = ({price}) => {
-	return <div>`R$ ${price.toFixed(2)*.replace('.', ',')*}`</div>;
-}
-export default Price;
-
-//uso
-<Price price={17}/>
-```
-
----
-
 ### **Exercício 1.8: Default Props** ⭐
 
 Crie um componente Badge com prop 'texto'. Se não receber texto, exibe 'Novo'.
@@ -140,16 +115,6 @@ Crie um componente Badge com prop 'texto'. Se não receber texto, exibe 'Novo'.
 - Use um span para exibir
 
 💡 *Dica: Use default parameter: function Badge({ texto = 'Novo' })*
-
-
-```jsx
-const Badge = ({texto = "Novo"}) => {
-	return <span>{texto}</span>;
-}
-export default Badge;
-```
-
----
 
 ### **Exercício 1.9: Composição de Componentes** ⭐⭐
 
@@ -175,22 +140,6 @@ Crie um componente StatusBadge que recebe 'status' (active/inactive/pending) e e
 💡 *Dica: className={`badge badge-${status}`}*
 
 
-```jsx
-const statuses = {
-	active: "badge-active",
-	inactive: "badge-inactive",
-	pending: "badge-pending",
-}
-const StatusBadge = (status = "active") => {
-	const statsClasses = statuses[status] || statuses.active;
-
-	return <div className={statsClasses}></div>;
-}
-export default StatusBadge;
-```
-
----
-
 ### **Exercício 1.11: Props de Objetos** ⭐⭐
 
 Crie um componente UserCard que recebe um objeto 'user' com nome, email e avatar.
@@ -203,23 +152,6 @@ Crie um componente UserCard que recebe um objeto 'user' com nome, email e avatar
 
 💡 *Dica: Destructure: function UserCard({ user })*
 
-
-```jsx
-const UserCard = ({user}) => {
-	const { name, email, avatar } = user;
-
-	return (
-		<div className="user-card">
-			<h3>{nome}</h3>
-			<p>{email}</p>
-			<img src={avatar} alt={nome}/>
-		</div>
-	);
-}
-export default UserCard;
-```
-
----
 
 ### **Exercício 1.12: Multiple Children** ⭐
 
