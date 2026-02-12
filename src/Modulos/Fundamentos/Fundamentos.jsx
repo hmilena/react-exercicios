@@ -1,7 +1,7 @@
 import Exercicio from "../../components/shared/Exercicio";
 import Greeting from "./Respostas/Greeting";
-import Welcome from "./Respostas/Welcome";
 import ProfileCard from "./Respostas/ProfileCard";
+import Button from "./Respostas/Button";
 
 const requisitosGreeting = [
     "Criar um componente chamado Greeting",
@@ -37,6 +37,17 @@ export default ProfileCard;
 // uso
 <ProfileCard name="Mia" age="25" job="Developer" />`
 
+const requisitosButton = [
+    "Props: text (string), color (string)",
+    "Use a cor como className",
+    "Exiba o texto dentro do botão"
+]
+const codeButton = `const Button = ({ text, color }) => {
+	return <button className={color ? color : "bg-blue-500"}>{text}</button>
+}
+
+export default Button;`
+
 const Fundamentos = () => {
     return (
         <div className="flex flex-col gap-4 p-5 bg-white">
@@ -56,6 +67,20 @@ const Fundamentos = () => {
                 requisitos={requisitosProfileCard}
                 codigo={codeProfileCard}>
                 <ProfileCard name="Mia" age="25" job="Developer" />
+            </Exercicio>
+
+            <Exercicio
+                titulo="Exercício 1.3: Button Component"
+                chamada="Crie um componente Button que recebe 'text' e 'color' via props."
+                requisitos={requisitosButton}
+                codigo={codeButton}>
+                <Button text="SUCCESS" color="bg-green-500" />
+                <br /><br />
+                <Button text="DANGER" color="bg-red-500" />
+                <br /><br />
+                <Button text="WARNING" color="bg-yellow-500" />
+                <br /><br />
+                <Button text="INFO" />
             </Exercicio>
 
         </div>
