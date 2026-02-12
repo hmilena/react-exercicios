@@ -11,7 +11,7 @@ function App() {
         <div className='flex w-full h-full'>
           <Sidebar />
 
-          <main className='flex flex-col flex-1 rounded bg-white w-full h-full'>
+          <main className='flex flex-col flex-1 rounded bg-white w-full h-full ml-80'>
             <Outlet />
           </main>
         </div>

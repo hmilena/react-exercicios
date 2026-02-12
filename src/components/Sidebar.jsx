@@ -15,10 +15,10 @@ const NAV_ITEMS = [
 
 const Sidebar = () => {
     return (
-        <aside className='flex flex-col rounded py-4 w-80 h-full'>
+        <aside className='flex flex-col rounded py-4 w-80 h-full fixed '>
             <Header />
 
-            <ol className="flex flex-col flex-1 list">
+            <ol className="flex flex-col flex-1 list overflow-y-auto">
                 {NAV_ITEMS.map((item) => (
                     <li key={item.to} className="rounded border-b border-gray-300">
                         <NavLink to={item.to} className="flex p-4 cursor-pointer text-left hyphens-auto  hover:bg-gray-200 active:bg-gray-300 text-gray-700 text-base hover:text-gray-900 transition-colors duration-200 ">
