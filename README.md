@@ -1,3 +1,17 @@
+# **MÓDULO 0: Introdução**
+
+##para instalar o projeto:
+ 
+```bash
+npm install
+```
+
+para rodar o projeto:
+
+```bash
+npm run dev
+```
+
 # Do OutSystems pra React
 
 # **MÓDULO 1: Fundamentos**
