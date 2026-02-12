@@ -1,14 +1,13 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import App from "./../App";
-import Home from "./../Pages/Home";
-import Fundamentos from "./../Modulos/1-Fundamentos/Respostas";
+import Fundamentos from "./../Modulos/Fundamentos/Fundamentos";
 
 export const routes = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
-      { path: "/", element: <Home /> },
+      { path: "/", element: <Fundamentos /> },
       { path: "/fundamentos", element: <Fundamentos /> },
     ],
   },
