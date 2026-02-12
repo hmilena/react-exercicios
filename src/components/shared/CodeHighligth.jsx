@@ -52,25 +52,27 @@ export default function CodeBlock({
                 </button>
             </div>
 
-            <SyntaxHighlighter
-                language={language}
-                style={oneDark}
-                showLineNumbers={showLineNumbers}
-                customStyle={{
-                    margin: 0,
-                    padding: "14px 14px",
-                    background: "transparent",
-                    fontSize: "13px",
-                    lineHeight: "1.6",
-                }}
-                lineNumberStyle={{
-                    minWidth: "2.25em",
-                    paddingRight: "1em",
-                    color: "rgba(255,255,255,0.35)",
-                }}
-            >
-                {normalized}
-            </SyntaxHighlighter>
+            <div className="max-h-[420px] overflow-auto">
+                <SyntaxHighlighter
+                    language={language}
+                    style={oneDark}
+                    showLineNumbers={showLineNumbers}
+                    customStyle={{
+                        margin: 0,
+                        padding: "14px 14px",
+                        background: "transparent",
+                        fontSize: "13px",
+                        lineHeight: "1.6",
+                    }}
+                    lineNumberStyle={{
+                        minWidth: "2.25em",
+                        paddingRight: "1em",
+                        color: "rgba(255,255,255,0.35)",
+                    }}
+                >
+                    {normalized}
+                </SyntaxHighlighter>
+            </div>
         </figure>
     );
 }

@@ -17,3 +17,29 @@ aside ol li a.active {
 main pre {
     background-color: #282c33 !important;
 }
+
+.exe-multiplo .grid>* {
+    @apply border;
+    @apply p-2;
+    @apply rounded-md;
+    @apply text-center;
+    @apply font-bold;
+    @apply border-sky-300;
+    @apply text-blue-500;
+}
+
+.main-header {
+    @apply col-span-2;
+}
+
+.main-sidebar {
+    @apply row-start-2;
+}
+
+.main-content {
+    @apply row-start-2;
+}
+
+.main-footer {
+    @apply col-span-2;
+}
