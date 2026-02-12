@@ -1,6 +1,6 @@
 # **MÓDULO 0: Introdução**
 
-##para instalar o projeto:
+para instalar o projeto:
  
 ```bash
 npm install
