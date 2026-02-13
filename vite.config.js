@@ -12,5 +12,6 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   css: {
     devSourcemap: true,
-  }
+  },
+  base: '/react-exercicios/',
 })
