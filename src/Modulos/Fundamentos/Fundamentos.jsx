@@ -26,6 +26,9 @@ import statusBadgeCode from "./Respostas/StatusBadge.jsx?raw";
 import UserCard from "./Respostas/UserCard";
 import userCardCode from "./Respostas/UserCard.jsx?raw";
 
+import MultipleChildren from "./Respostas/MultipleChildren";
+import multipleChildrenCode from "./Respostas/MultipleChildren.jsx?raw";
+
 const requisitosGreeting = [
     "Criar um componente chamado Greeting",
     "Receber uma prop 'name'",
@@ -83,6 +86,13 @@ const requisitosUserCard = [
     "Use o componente de Avatar que criamos anteriormente",
     "O avatar deve ficar na esquerda",
     "Nome em h3 e email em a, do lado direito"
+]
+
+const requisitosMultipleChildren = [
+    "Crie um componente MultipleChildren",
+    "Use o componente CardComposition que já criamos",
+    "Crie 5 cards com dados diferentes (pode usar array e .map)",
+    "Organize em grid"
 ]
 
 const Fundamentos = () => {
@@ -175,11 +185,20 @@ const Fundamentos = () => {
 
             <Exercicio
                 titulo="Exercício 1.9: Props de Objetos"
-                chamada="Crie um componente UserCard que recebe um objeto 'user' com nome, email e avatar."
+                chamada="Crie um componente UserCard que recebe um objeto 'user' com nome, email, avatar e tamanho do avatar."
                 requisitos={requisitosUserCard}
                 codigo={userCardCode}>
 
                 <UserCard user={{ name: "Mia", email: "contato@blogdamia.com.br", avatar: "https://wp.blogdamia.com.br/wp-content/uploads/2025/12/20251209_202622-scaled.avif", avatarSize: "small" }} />
+            </Exercicio>
+
+            <Exercicio
+                titulo="Exercício 1.10: Multiple Children"
+                chamada="Crie um App que renderiza 5 Cards com dados diferentes."
+                requisitos={requisitosMultipleChildren}
+                codigo={multipleChildrenCode}>
+
+                <MultipleChildren />
             </Exercicio>
 
         </div>
