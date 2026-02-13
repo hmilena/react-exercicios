@@ -8,6 +8,7 @@ export const routes = createBrowserRouter([
     element: <App />,
     children: [
       { path: "/", element: <Fundamentos /> },
+      { path: "/react-exercicios", element: <Fundamentos /> },
       { path: "/fundamentos", element: <Fundamentos /> },
     ],
   },
