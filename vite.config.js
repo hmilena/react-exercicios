@@ -14,4 +14,7 @@ export default defineConfig({
     devSourcemap: true,
   },
   base: '/react-exercicios/',
+  build: {
+    outDir: 'docs',
+  },
 })
