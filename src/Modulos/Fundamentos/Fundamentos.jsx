@@ -29,6 +29,9 @@ import userCardCode from "./Respostas/UserCard.jsx?raw";
 import MultipleChildren from "./Respostas/MultipleChildren";
 import multipleChildrenCode from "./Respostas/MultipleChildren.jsx?raw";
 
+import IconButton from "./Respostas/IconButton";
+import iconButtonCode from "./Respostas/IconButton.jsx?raw";
+
 const requisitosGreeting = [
     "Criar um componente chamado Greeting",
     "Receber uma prop 'name'",
@@ -93,6 +96,12 @@ const requisitosMultipleChildren = [
     "Use o componente CardComposition que já criamos",
     "Crie 5 cards com dados diferentes (pode usar array e .map)",
     "Organize em grid"
+]
+
+const requisitosIconButton = [
+    "Props: icon, label",
+    "Exiba ícone e label lado a lado",
+    "Exemplo: 🏠 Home, ⚙️ Settings"
 ]
 
 const Fundamentos = () => {
@@ -199,6 +208,19 @@ const Fundamentos = () => {
                 codigo={multipleChildrenCode}>
 
                 <MultipleChildren />
+            </Exercicio>
+
+            <Exercicio
+                titulo="Exercício 1.11: Icon Button"
+                chamada="Crie um componente IconButton que recebe icon (emoji ou texto) e label."
+                requisitos={requisitosIconButton}
+                codigo={iconButtonCode}>
+
+                <div className="inline-flex gap-4">
+                    <IconButton icon="🏠" label="Home" />
+                    <IconButton icon="⚙️" label="Settings" />
+                </div>
+
             </Exercicio>
 
         </div>
