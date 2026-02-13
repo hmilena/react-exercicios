@@ -1,6 +1,6 @@
 # **MÓDULO 0: Introdução**
 
-Veja a pagina: https://hmilena.github.io/react-exercicios/
+Veja a pagina: <a href="https://hmilena.github.io/react-exercicios/" target="_blank">[React Exercicios](https://hmilena.github.io/react-exercicios/)</a>
 
 para instalar o projeto:
  
