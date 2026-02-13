@@ -6,6 +6,7 @@ import Avatar from "./Respostas/Avatar";
 import All from "./Respostas/multiple/All";
 import Price from "./Respostas/Price";
 import CardComposition from "./Respostas/Composition";
+import StatusBadge from "./Respostas/StatusBadge";
 
 const requisitosGreeting = [
     "Criar um componente chamado Greeting",
@@ -178,6 +179,27 @@ const codeComposition = `const CardComposition = ({ title, description, btnText 
 
 export default CardComposition;`
 
+const requisitosStatusBadge = [
+    "Prop: status",
+    "Cor verde para active, vermelho para inactive, amarelo para pending",
+    "Use className dinâmico: badge-active, badge-inactive, badge-pending",
+    "Dica: className={`badge badge-${status}`}"
+]
+const codeStatusBadge = `const statuses = {
+    active: "badge-active bg-green-50 text-green-700 inset-ring-green-600/20",
+    inactive: "badge-inactive bg-red-50 text-red-700 inset-ring-red-600/20",
+    pending: "badge-pending bg-yellow-50 text-yellow-700 inset-ring-yellow-600/20",
+}
+
+const StatusBadge = ({ status = "active" }) => {
+    const statsClasses = statuses[status] || statuses.active;
+    const baseClass = "mt-4 inline-flex items-center rounded-md px-2 py-1 text-xs font-medium inset-ring mb-2"
+
+    return <span className={\`\\\${statsClasses} \\\${baseClass}\`}>{status}</span>;
+}
+
+export default StatusBadge;`
+
 const Fundamentos = () => {
     return (
         <div className="flex flex-col gap-4 p-5 bg-white">
@@ -250,6 +272,20 @@ const Fundamentos = () => {
                 codigo={codeComposition}>
 
                 <CardComposition title="Conheça Lisboa" description="Maior cidade de Portugal espera por você!" btnText="Viajar" />
+            </Exercicio>
+
+            <Exercicio
+                titulo="Exercício 1.8: Status Badge"
+                chamada="Crie um componente StatusBadge que recebe 'status' (active/inactive/pending) e exibe badge colorido."
+                requisitos={requisitosStatusBadge}
+                codigo={codeStatusBadge}>
+
+                <div className="flex gap-2">
+                    <StatusBadge status="active" />
+                    <StatusBadge status="inactive" />
+                    <StatusBadge status="pending" />
+                </div>
+
             </Exercicio>
 
         </div>
