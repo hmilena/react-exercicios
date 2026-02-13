@@ -5,6 +5,7 @@ import Button from "./Respostas/Button";
 import Avatar from "./Respostas/Avatar";
 import All from "./Respostas/multiple/All";
 import Price from "./Respostas/Price";
+import CardComposition from "./Respostas/Composition";
 
 const requisitosGreeting = [
     "Criar um componente chamado Greeting",
@@ -122,7 +123,7 @@ const App = () => {
 
 export default App;
 
-/css
+//css
 .exe-multiplo .grid>* {
     @apply border;
     @apply p-2;
@@ -159,6 +160,23 @@ const codePrice = `const Price = ({ price }) => {
     return <div>R$ {price.toFixed(2).replace('.', ',')}</div>;
 }
 export default Price;`
+
+const requisitosComposition = [
+    "Props: title, description, btnText",
+    "Estruture: título em h3, descrição em p, botão em button",
+    "Aplique classes CSS adequadas"
+]
+const codeComposition = `const CardComposition = ({ title, description, btnText = "Ir ->" }) => {
+    return (
+        <div className="card inline-flex flex-col gap-3 p-3 shadow-lg border border-amber-400 w-min-100 rounded-md bg-amber-50">
+            {title && <h3 className="text-xl font-medium text-black m-0">{title}</h3>}
+            {description && <p className="text-gray-500 m-0">{description}</p>}
+            <button className="bg-amber-500 hover:bg-amber-700 p-3 py-1.5 rounded text-white transition m-0 cursor-pointer">{btnText}</button>
+        </div>
+    );
+}
+
+export default CardComposition;`
 
 const Fundamentos = () => {
     return (
@@ -223,6 +241,15 @@ const Fundamentos = () => {
                 codigo={codePrice}>
 
                 <Price price={100} />
+            </Exercicio>
+
+            <Exercicio
+                titulo="Exercício 1.7: Composição de Componentes"
+                chamada="Crie um Card que recebe título, descrição e botão (todos via props)."
+                requisitos={requisitosComposition}
+                codigo={codeComposition}>
+
+                <CardComposition title="Conheça Lisboa" description="Maior cidade de Portugal espera por você!" btnText="Viajar" />
             </Exercicio>
 
         </div>
