@@ -32,6 +32,9 @@ import multipleChildrenCode from "./Respostas/MultipleChildren.jsx?raw";
 import IconButton from "./Respostas/IconButton";
 import iconButtonCode from "./Respostas/IconButton.jsx?raw";
 
+import RatingStars from "./Respostas/RatingStars";
+import ratingStarsCode from "./Respostas/RatingStars.jsx?raw";
+
 const requisitosGreeting = [
     "Criar um componente chamado Greeting",
     "Receber uma prop 'name'",
@@ -102,6 +105,13 @@ const requisitosIconButton = [
     "Props: icon, label",
     "Exiba ícone e label lado a lado",
     "Exemplo: 🏠 Home, ⚙️ Settings"
+]
+
+const requisitosRatingStars = [
+    "Crie um componente chamado RatingStars",
+    "Prop: rating (number)",
+    "Exiba estrelas ⭐ baseadas no número",
+    "Exemplo: 5 -> ⭐⭐⭐⭐⭐, 3 -> ⭐⭐⭐"
 ]
 
 const Fundamentos = () => {
@@ -219,6 +229,20 @@ const Fundamentos = () => {
                 <div className="inline-flex gap-4">
                     <IconButton icon="🏠" label="Home" />
                     <IconButton icon="⚙️" label="Settings" />
+                </div>
+
+            </Exercicio>
+
+            <Exercicio
+                titulo="Exercício 1.12: Rating Stars"
+                chamada="Crie um componente Rating que recebe número (1-5) e exibe estrelas ⭐."
+                requisitos={requisitosRatingStars}
+                codigo={ratingStarsCode}>
+
+                <div className="inline-flex flex-col gap-4">
+                    <RatingStars rating={5} />
+                    <RatingStars rating={3} />
+                    <RatingStars rating={1} />
                 </div>
 
             </Exercicio>
