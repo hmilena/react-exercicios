@@ -1,5 +1,7 @@
 # **MÓDULO 0: Introdução**
 
+Veja a pagina: https://hmilena.github.io/react-exercicios/
+
 para instalar o projeto:
  
 ```bash
