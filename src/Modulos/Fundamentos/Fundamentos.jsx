@@ -328,11 +328,6 @@ const Fundamentos = () => {
                 </Exercicio>
             </div>
 
-
-
-
-
-
         </div>
     )
 }
