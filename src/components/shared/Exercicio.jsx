@@ -22,7 +22,7 @@ const Exercicio = ({ titulo, chamada, requisitos = [], codigo, children }) => {
                     ))}
                 </ul>
 
-                <Accordion title="resposta" titleClass={`cursor-pointer w-full flex justify-between items-center p-2 text-slate-800 transition mb-4 rounded hover:bg-emerald-200 bg-emerald-100`} isOpenClass="bg-emerald-200" spanClass="px-2 font-medium">
+                <Accordion title="ver resposta" titleClass={`cursor-pointer w-full flex justify-between items-center p-2 text-slate-800 transition mb-4 rounded hover:bg-emerald-200 bg-emerald-100`} isOpenClass="bg-emerald-200" spanClass="px-4 font-bold">
                     <div className="pb-5 text-sm text-slate-500">
                         <div className="mb-5">
                             {codigo && <CodeBlock code={codigo} language="jsx" />}
