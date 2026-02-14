@@ -35,6 +35,9 @@ import iconButtonCode from "./Respostas/IconButton.jsx?raw";
 import RatingStars from "./Respostas/RatingStars";
 import ratingStarsCode from "./Respostas/RatingStars.jsx?raw";
 
+import ProductCard from "./Respostas/ProductCard";
+import productCardCode from "./Respostas/ProductCard.jsx?raw";
+
 const requisitosGreeting = [
     "Criar um componente chamado Greeting",
     "Receber uma prop 'name'",
@@ -110,8 +113,16 @@ const requisitosIconButton = [
 const requisitosRatingStars = [
     "Crie um componente chamado RatingStars",
     "Prop: rating (number)",
-    "Exiba estrelas ⭐ baseadas no número",
-    "Exemplo: 5 -> ⭐⭐⭐⭐⭐, 3 -> ⭐⭐⭐"
+    "Exiba estrelas ★ baseadas no número",
+    "Exemplo: 5 -> ★★★★★, 3 -> ★★★",
+    "Dica: use Array.from({ length: rating }).map()",
+    "Estilize o componente com Tailwind CSS"
+]
+
+const requisitosProductCard = [
+    "Props: image, name, price, discount (opcional)",
+    "Se tiver desconto, exiba preço riscado e novo preço",
+    "Botão 'Adicionar ao Carrinho"
 ]
 
 const Fundamentos = () => {
@@ -119,6 +130,7 @@ const Fundamentos = () => {
         <div className="flex flex-col gap-4 p-5 bg-white">
             <h1 className="text-2xl font-bold mb-4">MÓDULO 1: Fundamentos (Componentes, JSX, Props)</h1>
 
+            {/* Hello Component */}
             <Exercicio
                 titulo="Exercício 1.1: Hello Component"
                 chamada="Crie um componente chamado Greeting que exibe 'Olá, Mundo!' em um h1"
@@ -127,6 +139,7 @@ const Fundamentos = () => {
                 <Greeting name="Mia" />
             </Exercicio>
 
+            {/* Profile Card */}
             <Exercicio
                 titulo="Exercício 1.2: Profile Card"
                 chamada="Crie um componente ProfileCard que recebe nome, idade e profissão via props e exibe em um card."
@@ -135,6 +148,7 @@ const Fundamentos = () => {
                 <ProfileCard name="Mia" age="25" job="Developer" />
             </Exercicio>
 
+            {/* Button Component */}
             <Exercicio
                 titulo="Exercício 1.3: Button Component"
                 chamada="Crie um componente Button que recebe 'text' e 'color' via props."
@@ -149,6 +163,7 @@ const Fundamentos = () => {
                 </div>
             </Exercicio>
 
+            {/* Avatar Component */}
             <Exercicio
                 titulo="Exercício 1.4: Avatar Component"
                 chamada="Crie um componente Avatar que recebe url da imagem, nome e tamanho (small/medium/large)."
@@ -161,6 +176,7 @@ const Fundamentos = () => {
                 </div>
             </Exercicio>
 
+            {/* Multiple Components */}
             <Exercicio
                 titulo="Exercício 1.5: Multiple Components"
                 chamada="Crie 4 componentes (Header, Sidebar,MainContent, Footer) e use todos no App."
@@ -170,6 +186,7 @@ const Fundamentos = () => {
                 <All />
             </Exercicio>
 
+            {/* Props com Números */}
             <Exercicio
                 titulo="Exercício 1.6: Props com Números"
                 chamada="Crie um componente Price que recebe valor (number) e exibe formatado com R$."
@@ -179,6 +196,7 @@ const Fundamentos = () => {
                 <Price price={100} />
             </Exercicio>
 
+            {/* Composição de Componentes */}
             <Exercicio
                 titulo="Exercício 1.7: Composição de Componentes"
                 chamada="Crie um Card que recebe título, descrição e botão (todos via props)."
@@ -188,6 +206,7 @@ const Fundamentos = () => {
                 <CardComposition title="Conheça Lisboa" description="Maior cidade de Portugal espera por você!" btnText="Viajar" />
             </Exercicio>
 
+            {/* Status Badge */}
             <Exercicio
                 titulo="Exercício 1.8: Status Badge"
                 chamada="Crie um componente StatusBadge que recebe 'status' (active/inactive/pending) e exibe badge colorido."
@@ -202,6 +221,7 @@ const Fundamentos = () => {
 
             </Exercicio>
 
+            {/* Props de Objetos */}
             <Exercicio
                 titulo="Exercício 1.9: Props de Objetos"
                 chamada="Crie um componente UserCard que recebe um objeto 'user' com nome, email, avatar e tamanho do avatar."
@@ -211,6 +231,7 @@ const Fundamentos = () => {
                 <UserCard user={{ name: "Mia", email: "contato@blogdamia.com.br", avatar: "https://wp.blogdamia.com.br/wp-content/uploads/2025/12/20251209_202622-scaled.avif", avatarSize: "small" }} />
             </Exercicio>
 
+            {/* Multiple Children */}
             <Exercicio
                 titulo="Exercício 1.10: Multiple Children"
                 chamada="Crie um App que renderiza 5 Cards com dados diferentes."
@@ -220,6 +241,7 @@ const Fundamentos = () => {
                 <MultipleChildren />
             </Exercicio>
 
+            {/* Icon Button */}
             <Exercicio
                 titulo="Exercício 1.11: Icon Button"
                 chamada="Crie um componente IconButton que recebe icon (emoji ou texto) e label."
@@ -233,6 +255,7 @@ const Fundamentos = () => {
 
             </Exercicio>
 
+            {/* Rating Stars */}
             <Exercicio
                 titulo="Exercício 1.12: Rating Stars"
                 chamada="Crie um componente Rating que recebe número (1-5) e exibe estrelas ⭐."
@@ -246,6 +269,31 @@ const Fundamentos = () => {
                 </div>
 
             </Exercicio>
+
+            {/* Product Card */}
+            <Exercicio
+                titulo="Exercício 1.13: Product Card"
+                chamada="Crie um ProductCard completo com imagem, nome, preço, desconto e botão."
+                requisitos={requisitosProductCard}
+                codigo={productCardCode}>
+
+                <div className="grid grid-cols-3 gap-5">
+                    <ProductCard
+                        image="https://wp.blogdamia.com.br/wp-content/uploads/2025/12/image-1766573803377-768x1024.jpg"
+                        name="Dualtron Victor Luxury Plus"
+                        price={500}
+                        discount={100}
+                    />
+                    <ProductCard
+                        image="https://wp.blogdamia.com.br/wp-content/uploads/2025/12/image-1766573803377-768x1024.jpg"
+                        name="Dualtron Victor Luxury Plus"
+                        price={500}
+                    />
+                </div>
+
+            </Exercicio>
+
+
 
         </div>
     )
