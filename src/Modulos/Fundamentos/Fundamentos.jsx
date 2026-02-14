@@ -120,9 +120,9 @@ const requisitosRatingStars = [
 ]
 
 const requisitosProductCard = [
-    "Props: image, name, price, discount (opcional)",
+    "Props: image, name, price (usar componente que já criamos), discount (opcional)",
     "Se tiver desconto, exiba preço riscado e novo preço",
-    "Botão 'Adicionar ao Carrinho"
+    "Botão 'Adicionar ao Carrinho (usar componente que já criamos)"
 ]
 
 const Fundamentos = () => {

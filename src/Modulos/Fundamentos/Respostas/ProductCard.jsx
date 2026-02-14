@@ -1,4 +1,5 @@
 import Price from "./Price";
+import Button from "./Button";
 
 const ProductCard = ({ image, name, price, discount }) => {
     return (
@@ -8,6 +9,7 @@ const ProductCard = ({ image, name, price, discount }) => {
             </figure>
             <h3 className="text-2xl tracking-tight text-gray-950">{name}</h3>
             {discount ? <span className="inline-flex gap-2 align-text-bottom font-light"><del className="text-red-500 text-sm"><Price price={price} /></del> <Price price={price - discount} /></span> : <Price price={price} />}
+            <Button text="Adicionar ao carrinho" />
         </div>
     );
 }
