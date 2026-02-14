@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <footer className='w-full p-4'>
+        <footer className='w-full p-4 pb-0'>
             <div className="bg-slate-500 rounded-lg p-4">
                 <h4 className="text-sm font-semibold text-white mb-1">
                     React Exercícios

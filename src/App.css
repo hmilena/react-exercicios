@@ -43,3 +43,7 @@ main pre {
 .main-footer {
     @apply col-span-2;
 }
+
+.exercicio:nth-child(even) {
+    @apply bg-sky-50;
+}

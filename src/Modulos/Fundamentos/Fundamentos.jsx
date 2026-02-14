@@ -130,197 +130,204 @@ const requisitosProductCard = [
 
 const requisitosBlogPostCard = [
     "Props: title, author, date, sumary, tags (array), image",
-    "Exiba tags como badges (componente que já temos",
+    "Exiba tags como badges",
     "Formate data: new Date(data).toLocaleDateString('pt-BR')"
 ]
 
 const Fundamentos = () => {
     return (
-        <div className="flex flex-col gap-4 p-5 bg-white">
-            <h1 className="text-2xl font-bold mb-4">MÓDULO 1: Fundamentos (Componentes, JSX, Props)</h1>
+        <div className="flex flex-col gap-4 bg-white">
 
-            {/* Hello Component */}
-            <Exercicio
-                titulo="Exercício 1.1: Hello Component"
-                chamada="Crie um componente chamado Greeting que exibe 'Olá, Mundo!' em um h1"
-                requisitos={requisitosGreeting}
-                codigo={greetingCode}>
-                <Greeting name="Mia" />
-            </Exercicio>
+            <div className="ex-title py-4 px-5 sticky top-0 bg-cyan-100 shadow-2xs">
+                <h1 className="text-2xl font-bold">MÓDULO 1: Fundamentos (Componentes, JSX, Props)</h1>
+            </div>
 
-            {/* Profile Card */}
-            <Exercicio
-                titulo="Exercício 1.2: Profile Card"
-                chamada="Crie um componente ProfileCard que recebe nome, idade e profissão via props e exibe em um card."
-                requisitos={requisitosProfileCard}
-                codigo={profileCardCode}>
-                <ProfileCard name="Mia" age="25" job="Developer" />
-            </Exercicio>
+            <div className="ex-content flex flex-col gap-4 px-5 pb-5">
 
-            {/* Button Component */}
-            <Exercicio
-                titulo="Exercício 1.3: Button Component"
-                chamada="Crie um componente Button que recebe 'text' e 'color' via props."
-                requisitos={requisitosButton}
-                codigo={buttonCode}>
+                {/* Hello Component */}
+                <Exercicio
+                    titulo="Exercício 1.1: Hello Component"
+                    chamada="Crie um componente chamado Greeting que exibe 'Olá, Mundo!' em um h1"
+                    requisitos={requisitosGreeting}
+                    codigo={greetingCode}>
+                    <Greeting name="Mia" />
+                </Exercicio>
 
-                <div className="flex gap-2">
-                    <Button text="SUCCESS" color="bg-green-500" />
-                    <Button text="DANGER" color="bg-red-500" />
-                    <Button text="WARNING" color="bg-yellow-500" />
-                    <Button text="INFO" />
-                </div>
-            </Exercicio>
+                {/* Profile Card */}
+                <Exercicio
+                    titulo="Exercício 1.2: Profile Card"
+                    chamada="Crie um componente ProfileCard que recebe nome, idade e profissão via props e exibe em um card."
+                    requisitos={requisitosProfileCard}
+                    codigo={profileCardCode}>
+                    <ProfileCard name="Mia" age="25" job="Developer" />
+                </Exercicio>
 
-            {/* Avatar Component */}
-            <Exercicio
-                titulo="Exercício 1.4: Avatar Component"
-                chamada="Crie um componente Avatar que recebe url da imagem, nome e tamanho (small/medium/large)."
-                requisitos={requisitosAvatar}
-                codigo={avatarCode}>
-                <div className="mt-3 flex -space-x-2 items-center">
-                    <Avatar name="Mia" imageUrl="https://wp.blogdamia.com.br/wp-content/uploads/2025/12/20251209_202622-scaled.avif" size="small" />
-                    <Avatar name="Mia" imageUrl="https://wp.blogdamia.com.br/wp-content/uploads/2025/12/20251209_202622-scaled.avif" size="medium" />
-                    <Avatar name="Mia" imageUrl="https://wp.blogdamia.com.br/wp-content/uploads/2025/12/20251209_202622-scaled.avif" size="large" />
-                </div>
-            </Exercicio>
+                {/* Button Component */}
+                <Exercicio
+                    titulo="Exercício 1.3: Button Component"
+                    chamada="Crie um componente Button que recebe 'text' e 'color' via props."
+                    requisitos={requisitosButton}
+                    codigo={buttonCode}>
 
-            {/* Multiple Components */}
-            <Exercicio
-                titulo="Exercício 1.5: Multiple Components"
-                chamada="Crie 4 componentes (Header, Sidebar,MainContent, Footer) e use todos no App."
-                requisitos={requisitosMultipleComponents}
-                codigo={allCode}>
+                    <div className="flex gap-2">
+                        <Button text="SUCCESS" color="bg-green-500" />
+                        <Button text="DANGER" color="bg-red-500" />
+                        <Button text="WARNING" color="bg-yellow-500" />
+                        <Button text="INFO" />
+                    </div>
+                </Exercicio>
 
-                <All />
-            </Exercicio>
+                {/* Avatar Component */}
+                <Exercicio
+                    titulo="Exercício 1.4: Avatar Component"
+                    chamada="Crie um componente Avatar que recebe url da imagem, nome e tamanho (small/medium/large)."
+                    requisitos={requisitosAvatar}
+                    codigo={avatarCode}>
+                    <div className="mt-3 flex -space-x-2 items-center">
+                        <Avatar name="Mia" imageUrl="https://wp.blogdamia.com.br/wp-content/uploads/2025/12/20251209_202622-scaled.avif" size="small" />
+                        <Avatar name="Mia" imageUrl="https://wp.blogdamia.com.br/wp-content/uploads/2025/12/20251209_202622-scaled.avif" size="medium" />
+                        <Avatar name="Mia" imageUrl="https://wp.blogdamia.com.br/wp-content/uploads/2025/12/20251209_202622-scaled.avif" size="large" />
+                    </div>
+                </Exercicio>
 
-            {/* Props com Números */}
-            <Exercicio
-                titulo="Exercício 1.6: Props com Números"
-                chamada="Crie um componente Price que recebe valor (number) e exibe formatado com R$."
-                requisitos={requisitosPrice}
-                codigo={priceCode}>
+                {/* Multiple Components */}
+                <Exercicio
+                    titulo="Exercício 1.5: Multiple Components"
+                    chamada="Crie 4 componentes (Header, Sidebar,MainContent, Footer) e use todos no App."
+                    requisitos={requisitosMultipleComponents}
+                    codigo={allCode}>
 
-                <Price price={100} />
-            </Exercicio>
+                    <All />
+                </Exercicio>
 
-            {/* Composição de Componentes */}
-            <Exercicio
-                titulo="Exercício 1.7: Composição de Componentes"
-                chamada="Crie um Card que recebe título, descrição e botão (todos via props)."
-                requisitos={requisitosComposition}
-                codigo={cardCompositionCode}>
+                {/* Props com Números */}
+                <Exercicio
+                    titulo="Exercício 1.6: Props com Números"
+                    chamada="Crie um componente Price que recebe valor (number) e exibe formatado com R$."
+                    requisitos={requisitosPrice}
+                    codigo={priceCode}>
 
-                <CardComposition title="Conheça Lisboa" description="Maior cidade de Portugal espera por você!" btnText="Viajar" />
-            </Exercicio>
+                    <Price price={100} />
+                </Exercicio>
 
-            {/* Status Badge */}
-            <Exercicio
-                titulo="Exercício 1.8: Status Badge"
-                chamada="Crie um componente StatusBadge que recebe 'status' (active/inactive/pending) e exibe badge colorido."
-                requisitos={requisitosStatusBadge}
-                codigo={statusBadgeCode}>
+                {/* Composição de Componentes */}
+                <Exercicio
+                    titulo="Exercício 1.7: Composição de Componentes"
+                    chamada="Crie um Card que recebe título, descrição e botão (todos via props)."
+                    requisitos={requisitosComposition}
+                    codigo={cardCompositionCode}>
 
-                <div className="flex gap-2">
-                    <StatusBadge status="active" />
-                    <StatusBadge status="inactive" />
-                    <StatusBadge status="pending" />
-                </div>
+                    <CardComposition title="Conheça Lisboa" description="Maior cidade de Portugal espera por você!" btnText="Viajar" />
+                </Exercicio>
 
-            </Exercicio>
+                {/* Status Badge */}
+                <Exercicio
+                    titulo="Exercício 1.8: Status Badge"
+                    chamada="Crie um componente StatusBadge que recebe 'status' (active/inactive/pending) e exibe badge colorido."
+                    requisitos={requisitosStatusBadge}
+                    codigo={statusBadgeCode}>
 
-            {/* Props de Objetos */}
-            <Exercicio
-                titulo="Exercício 1.9: Props de Objetos"
-                chamada="Crie um componente UserCard que recebe um objeto 'user' com nome, email, avatar e tamanho do avatar."
-                requisitos={requisitosUserCard}
-                codigo={userCardCode}>
+                    <div className="flex gap-2">
+                        <StatusBadge status="active" />
+                        <StatusBadge status="inactive" />
+                        <StatusBadge status="pending" />
+                    </div>
 
-                <UserCard user={{ name: "Mia", email: "contato@blogdamia.com.br", avatar: "https://wp.blogdamia.com.br/wp-content/uploads/2025/12/20251209_202622-scaled.avif", avatarSize: "small" }} />
-            </Exercicio>
+                </Exercicio>
 
-            {/* Multiple Children */}
-            <Exercicio
-                titulo="Exercício 1.10: Multiple Children"
-                chamada="Crie um App que renderiza 5 Cards com dados diferentes."
-                requisitos={requisitosMultipleChildren}
-                codigo={multipleChildrenCode}>
+                {/* Props de Objetos */}
+                <Exercicio
+                    titulo="Exercício 1.9: Props de Objetos"
+                    chamada="Crie um componente UserCard que recebe um objeto 'user' com nome, email, avatar e tamanho do avatar."
+                    requisitos={requisitosUserCard}
+                    codigo={userCardCode}>
 
-                <MultipleChildren />
-            </Exercicio>
+                    <UserCard user={{ name: "Mia", email: "contato@blogdamia.com.br", avatar: "https://wp.blogdamia.com.br/wp-content/uploads/2025/12/20251209_202622-scaled.avif", avatarSize: "small" }} />
+                </Exercicio>
 
-            {/* Icon Button */}
-            <Exercicio
-                titulo="Exercício 1.11: Icon Button"
-                chamada="Crie um componente IconButton que recebe icon (emoji ou texto) e label."
-                requisitos={requisitosIconButton}
-                codigo={iconButtonCode}>
+                {/* Multiple Children */}
+                <Exercicio
+                    titulo="Exercício 1.10: Multiple Children"
+                    chamada="Crie um App que renderiza 5 Cards com dados diferentes."
+                    requisitos={requisitosMultipleChildren}
+                    codigo={multipleChildrenCode}>
 
-                <div className="inline-flex gap-4">
-                    <IconButton icon="🏠" label="Home" />
-                    <IconButton icon="⚙️" label="Settings" />
-                </div>
+                    <MultipleChildren />
+                </Exercicio>
 
-            </Exercicio>
+                {/* Icon Button */}
+                <Exercicio
+                    titulo="Exercício 1.11: Icon Button"
+                    chamada="Crie um componente IconButton que recebe icon (emoji ou texto) e label."
+                    requisitos={requisitosIconButton}
+                    codigo={iconButtonCode}>
 
-            {/* Rating Stars */}
-            <Exercicio
-                titulo="Exercício 1.12: Rating Stars"
-                chamada="Crie um componente Rating que recebe número (1-5) e exibe estrelas ⭐."
-                requisitos={requisitosRatingStars}
-                codigo={ratingStarsCode}>
+                    <div className="inline-flex gap-4">
+                        <IconButton icon="🏠" label="Home" />
+                        <IconButton icon="⚙️" label="Settings" />
+                    </div>
 
-                <div className="inline-flex flex-col gap-4">
-                    <RatingStars rating={5} />
-                    <RatingStars rating={3} />
-                    <RatingStars rating={1} />
-                </div>
+                </Exercicio>
 
-            </Exercicio>
+                {/* Rating Stars */}
+                <Exercicio
+                    titulo="Exercício 1.12: Rating Stars"
+                    chamada="Crie um componente Rating que recebe número (1-5) e exibe estrelas ⭐."
+                    requisitos={requisitosRatingStars}
+                    codigo={ratingStarsCode}>
 
-            {/* Product Card */}
-            <Exercicio
-                titulo="Exercício 1.13: Product Card"
-                chamada="Crie um ProductCard completo com imagem, nome, preço, desconto e botão."
-                requisitos={requisitosProductCard}
-                codigo={productCardCode}>
+                    <div className="inline-flex flex-col gap-4">
+                        <RatingStars rating={5} />
+                        <RatingStars rating={3} />
+                        <RatingStars rating={1} />
+                    </div>
 
-                <div className="grid grid-cols-2 gap-5">
-                    <ProductCard
-                        image="https://wp.blogdamia.com.br/wp-content/uploads/2025/12/image-1766573803377-768x1024.jpg"
-                        name="Dualtron Victor Luxury Plus"
-                        price={500}
-                        discount={100}
-                    />
-                    <ProductCard
-                        image="https://wp.blogdamia.com.br/wp-content/uploads/2025/12/image-1766573803377-768x1024.jpg"
-                        name="Dualtron Victor Luxury Plus"
-                        price={500}
-                    />
-                </div>
+                </Exercicio>
 
-            </Exercicio>
+                {/* Product Card */}
+                <Exercicio
+                    titulo="Exercício 1.13: Product Card"
+                    chamada="Crie um ProductCard completo com imagem, nome, preço, desconto e botão."
+                    requisitos={requisitosProductCard}
+                    codigo={productCardCode}>
 
-            {/* Blog Post Card */}
-            <Exercicio
-                titulo="Exercício 1.15: Complex Card"
-                chamada="Crie o componente BlogPostCard com title, author, date, sumary, tags e image"
-                requisitos={requisitosBlogPostCard}
-                codigo={blogPostCardCode}>
+                    <div className="grid grid-cols-2 gap-5">
+                        <ProductCard
+                            image="https://wp.blogdamia.com.br/wp-content/uploads/2025/12/image-1766573803377-768x1024.jpg"
+                            name="Dualtron Victor Luxury Plus"
+                            price={500}
+                            discount={100}
+                        />
+                        <ProductCard
+                            image="https://wp.blogdamia.com.br/wp-content/uploads/2025/12/image-1766573803377-768x1024.jpg"
+                            name="Dualtron Victor Luxury Plus"
+                            price={500}
+                        />
+                    </div>
 
-                <div className="grid grid-cols-2 gap-5">
-                    <BlogPostCard
-                        image="https://wp.blogdamia.com.br/wp-content/uploads/2025/05/thunderbolts_xxlg-691x1024.avif"
-                        title="Thunderbolts e o sentimento de não sentir nada"
-                        author="Mia"
-                        date="2025-05-19"
-                        sumary="Não sei se são os sinais dos tempos. A forma melancólica que passamos esses últimos anos desde a pandemia, as guerras que estão a acontecer, as tragédias da nossa vida[...]"
-                        tags={["filme", "blog", "emotional damage"]}
-                    />
-                </div>
+                </Exercicio>
 
-            </Exercicio>
+                {/* Blog Post Card */}
+                <Exercicio
+                    titulo="Exercício 1.15: Complex Card"
+                    chamada="Crie o componente BlogPostCard com title, author, date, sumary, tags e image"
+                    requisitos={requisitosBlogPostCard}
+                    codigo={blogPostCardCode}>
+
+                    <div className="grid grid-cols-2 gap-5">
+                        <BlogPostCard
+                            image="https://wp.blogdamia.com.br/wp-content/uploads/2025/05/thunderbolts_xxlg-691x1024.avif"
+                            title="Thunderbolts e o sentimento de não sentir nada"
+                            author="Mia"
+                            date="2025-05-19"
+                            sumary="Não sei se são os sinais dos tempos. A forma melancólica que passamos esses últimos anos desde a pandemia, as guerras que estão a acontecer, as tragédias da nossa vida[...]"
+                            tags={["filme", "blog", "emotional damage"]}
+                        />
+                    </div>
+
+                </Exercicio>
+            </div>
+
 
 
 
