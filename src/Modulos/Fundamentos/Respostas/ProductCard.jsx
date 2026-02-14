@@ -1,6 +1,6 @@
 import Price from "./Price";
 
-const ProductCard = ({ image, name, price, discount = 0 }) => {
+const ProductCard = ({ image, name, price, discount }) => {
     return (
         <div className="inline-flex flex-col product-card border border-blue-200 p-3 bg-blue-50 rounded gap-2">
             <figure className="overflow-hidden rounded">

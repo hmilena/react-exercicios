@@ -277,7 +277,7 @@ const Fundamentos = () => {
                 requisitos={requisitosProductCard}
                 codigo={productCardCode}>
 
-                <div className="grid grid-cols-3 gap-5">
+                <div className="grid grid-cols-2 gap-5">
                     <ProductCard
                         image="https://wp.blogdamia.com.br/wp-content/uploads/2025/12/image-1766573803377-768x1024.jpg"
                         name="Dualtron Victor Luxury Plus"
