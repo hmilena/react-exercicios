@@ -38,6 +38,9 @@ import ratingStarsCode from "./Respostas/RatingStars.jsx?raw";
 import ProductCard from "./Respostas/ProductCard";
 import productCardCode from "./Respostas/ProductCard.jsx?raw";
 
+import BlogPostCard from "./Respostas/BlogPostCard";
+import blogPostCardCode from "./Respostas/BlogPostCard.jsx?raw";
+
 const requisitosGreeting = [
     "Criar um componente chamado Greeting",
     "Receber uma prop 'name'",
@@ -123,6 +126,12 @@ const requisitosProductCard = [
     "Props: image, name, price (usar componente que já criamos), discount (opcional)",
     "Se tiver desconto, exiba preço riscado e novo preço",
     "Botão 'Adicionar ao Carrinho (usar componente que já criamos)"
+]
+
+const requisitosBlogPostCard = [
+    "Props: title, author, date, sumary, tags (array), image",
+    "Exiba tags como badges (componente que já temos",
+    "Formate data: new Date(data).toLocaleDateString('pt-BR')"
 ]
 
 const Fundamentos = () => {
@@ -292,6 +301,28 @@ const Fundamentos = () => {
                 </div>
 
             </Exercicio>
+
+            {/* Blog Post Card */}
+            <Exercicio
+                titulo="Exercício 1.15: Complex Card"
+                chamada="Crie o componente BlogPostCard com title, author, date, sumary, tags e image"
+                requisitos={requisitosBlogPostCard}
+                codigo={blogPostCardCode}>
+
+                <div className="grid grid-cols-2 gap-5">
+                    <BlogPostCard
+                        image="https://wp.blogdamia.com.br/wp-content/uploads/2025/05/thunderbolts_xxlg-691x1024.avif"
+                        title="Thunderbolts e o sentimento de não sentir nada"
+                        author="Mia"
+                        date="2025-05-19"
+                        sumary="Não sei se são os sinais dos tempos. A forma melancólica que passamos esses últimos anos desde a pandemia, as guerras que estão a acontecer, as tragédias da nossa vida[...]"
+                        tags={["filme", "blog", "emotional damage"]}
+                    />
+                </div>
+
+            </Exercicio>
+
+
 
 
 
