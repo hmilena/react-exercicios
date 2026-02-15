@@ -9,6 +9,9 @@ import counter2Code from "./Respostas/Counter2.jsx?raw";
 import Counter3 from "./Respostas/Counter3";
 import counter3Code from "./Respostas/Counter3.jsx?raw";
 
+import InputText from "./Respostas/InputText";
+import inputTextCode from "./Respostas/InputText.jsx?raw";
+
 const StateInteratividade = () => {
     return (
         <div className="flex flex-col gap-4 bg-white">
@@ -16,6 +19,7 @@ const StateInteratividade = () => {
                 <h1 className="text-2xl font-bold">MÓDULO 2: State e Interatividade (useState, Event Handlers, Forms)</h1>
             </div>
             <div className="ex-content flex flex-col gap-4 px-5 pb-5">
+
                 <Exercicio
                     titulo="Exercício 2.1: Simple Counter"
                     chamada="Crie um contador que inicia em 0 com botão para incrementar"
@@ -47,8 +51,9 @@ const StateInteratividade = () => {
                     titulo="Exercício 2.4: Input de Texto"
                     chamada="Crie input que exibe em tempo real o que você digita."
                     requisitos={["Input controlado (value={state})", "onChange atualiza o state", "Exiba o texto embaixo do input", "Dica: onChange={(e) => setText(e.target.value)}"]}
+                    codigo={inputTextCode}
                 >
-
+                    <InputText />
                 </Exercicio>
 
                 <Exercicio
