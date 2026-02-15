@@ -15,6 +15,9 @@ import inputTextCode from "./Respostas/InputText.jsx?raw";
 import CharacterCounter from "./Respostas/CharacterCounter";
 import characterCounterCode from "./Respostas/CharacterCounter.jsx?raw";
 
+import Toggle from "./Respostas/Toggle";
+import toggleCode from "./Respostas/Toggle.jsx?raw";
+
 const StateInteratividade = () => {
     return (
         <div className="flex flex-col gap-4 bg-white">
@@ -72,8 +75,9 @@ const StateInteratividade = () => {
                     titulo="Exercício 2.6: Toggle Button"
                     chamada="Botão que alterna entre ON e OFF."
                     requisitos={["useState booleano", "Clique alterna o estado", "Mude o texto do botão baseado no estado", "Aplique className diferente (on/off)", "Dica: setIsOn(!isOn)"]}
+                    codigo={toggleCode}
                 >
-
+                    <Toggle />
                 </Exercicio>
 
                 <Exercicio
