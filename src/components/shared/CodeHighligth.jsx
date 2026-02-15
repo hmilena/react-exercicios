@@ -1,13 +1,13 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, memo } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-export default function CodeBlock({
+const CodeBlock = ({
     code,
     language = "jsx",
     showLineNumbers = true,
     title,
-}) {
+}) => {
     const [copied, setCopied] = useState(false);
 
     const normalized = useMemo(() => code.trimEnd(), [code]);
@@ -76,3 +76,5 @@ export default function CodeBlock({
         </figure>
     );
 }
+
+export default memo(CodeBlock);

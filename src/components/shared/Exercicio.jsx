@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 import Accordion from "./Accordion";
 import CodeBlock from "./CodeHighligth";
 
@@ -44,4 +44,4 @@ const Exercicio = ({ titulo = "", chamada = "", requisitos = [], codigo, childre
     )
 }
 
-export default Exercicio;
+export default memo(Exercicio);

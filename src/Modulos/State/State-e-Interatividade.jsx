@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Exercicio from "../../components/shared/Exercicio";
 
 import Counter1 from "./Respostas/Counter1";
@@ -15,10 +16,16 @@ import inputTextCode from "./Respostas/InputText.jsx?raw";
 import CharacterCounter from "./Respostas/CharacterCounter";
 import characterCounterCode from "./Respostas/CharacterCounter.jsx?raw";
 
-import Toggle from "./Respostas/Toggle";
-import toggleCode from "./Respostas/Toggle.jsx?raw";
+import ToggleButton from "./Respostas/ToggleButton";
+import toggleButtonCode from "./Respostas/ToggleButton.jsx?raw";
+
+import ToggleContent from "./Respostas/ToggleContent";
+import toggleContentCode from "./Respostas/ToggleContent.jsx?raw";
 
 const StateInteratividade = () => {
+    const [isFirstToggleOn, setIsFirstToggleOn] = useState(false);
+    const [isOn, setIsOn] = useState(false);
+
     return (
         <div className="flex flex-col gap-4 bg-white">
             <div className="ex-title py-4 px-5 sticky top-0 bg-cyan-100 shadow-2xs">
@@ -74,10 +81,24 @@ const StateInteratividade = () => {
                 <Exercicio
                     titulo="Exercício 2.6: Toggle Button"
                     chamada="Botão que alterna entre ON e OFF."
-                    requisitos={["useState booleano", "Clique alterna o estado", "Mude o texto do botão baseado no estado", "Aplique className diferente (on/off)", "Dica: setIsOn(!isOn)"]}
-                    codigo={toggleCode}
+                    requisitos={[
+                        "useState booleano",
+                        "Clique alterna o estado",
+                        "Mude o texto do botão baseado no estado",
+                        "Aplique className diferente (on/off)",
+                        "Dica: setIsOn(!isOn)"
+                    ]}
+                    codigo={`// no pai
+const [isFirstToggleOn, setIsFirstToggleOn] = useState(false);
+
+// no componente
+${toggleButtonCode}
+
+// na chamada
+<ToggleButton checked={isFirstToggleOn} onChange={setIsFirstToggleOn} />
+                    `}
                 >
-                    <Toggle />
+                    <ToggleButton checked={isFirstToggleOn} onChange={setIsFirstToggleOn} />
                 </Exercicio>
 
                 <Exercicio
@@ -89,7 +110,24 @@ const StateInteratividade = () => {
                         "Use renderização condicional",
                         "Dica: {isVisible && <p>Conteúdo...</p>}"
                     ]}
+                    codigo={`
+// no pai
+const [isOn, setIsOn] = useState(false);
+
+//no componente
+${toggleContentCode}
+
+//na chamada
+<ToggleContent checked={isOn} onChange={setIsOn} styleClasses="text-xs text-amber-500">Conteúdo que aparece quando está ON</ToggleContent>
+`}
                 >
+                    <ToggleContent
+                        checked={isOn}
+                        onChange={setIsOn}
+                        styleClasses="text-xs text-amber-500"
+                    >
+                        Conteúdo que aparece quando está ON
+                    </ToggleContent>
 
                 </Exercicio>
 
