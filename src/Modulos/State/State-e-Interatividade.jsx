@@ -12,6 +12,9 @@ import counter3Code from "./Respostas/Counter3.jsx?raw";
 import InputText from "./Respostas/InputText";
 import inputTextCode from "./Respostas/InputText.jsx?raw";
 
+import CharacterCounter from "./Respostas/CharacterCounter";
+import characterCounterCode from "./Respostas/CharacterCounter.jsx?raw";
+
 const StateInteratividade = () => {
     return (
         <div className="flex flex-col gap-4 bg-white">
@@ -60,8 +63,9 @@ const StateInteratividade = () => {
                     titulo="Exercício 2.5: Character Counter"
                     chamada="Input que mostra quantos caracteres você digitou."
                     requisitos={["Input de texto controlado", "Exiba 'X caracteres' abaixo", "Limite máximo de 100 caracteres", "Dica: Use text.length e maxLength={100}"]}
+                    codigo={characterCounterCode}
                 >
-
+                    <CharacterCounter />
                 </Exercicio>
 
                 <Exercicio
