@@ -1,5 +1,14 @@
 import Exercicio from "../../components/shared/Exercicio";
 
+import Counter1 from "./Respostas/Counter1";
+import counter1Code from "./Respostas/Counter1.jsx?raw";
+
+import Counter2 from "./Respostas/Counter2";
+import counter2Code from "./Respostas/Counter2.jsx?raw";
+
+import Counter3 from "./Respostas/Counter3";
+import counter3Code from "./Respostas/Counter3.jsx?raw";
+
 const StateInteratividade = () => {
     return (
         <div className="flex flex-col gap-4 bg-white">
@@ -11,24 +20,27 @@ const StateInteratividade = () => {
                     titulo="Exercício 2.1: Simple Counter"
                     chamada="Crie um contador que inicia em 0 com botão para incrementar"
                     requisitos={["useState para o contador", "Botão '+1' que incrementa", "Exiba o valor atual", "Dica: const [count, setCount] = useState(0)"]}
+                    codigo={counter1Code}
                 >
-
+                    <Counter1 />
                 </Exercicio>
 
                 <Exercicio
                     titulo="Exercício 2.2: Counter com Decremento"
                     chamada="Adicione botão de decremento ao contador."
                     requisitos={["Botões +1 e -1", "Impedir valores negativos", "Exibir mensagem se tentar ir abaixo de 0", "Dica: Use if (count > 0) antes de decrementar"]}
+                    codigo={counter2Code}
                 >
-
+                    <Counter2 />
                 </Exercicio>
 
                 <Exercicio
                     titulo="Exercício 2.3: Reset Counter"
                     chamada="Adicione botão Reset que volta contador para 0."
                     requisitos={["Botões +, -, Reset", "Reset deve setCount(0)", "Desabilite Reset quando já estiver em 0", "Dica: disabled={count === 0}"]}
+                    codigo={counter3Code}
                 >
-
+                    <Counter3 />
                 </Exercicio>
 
                 <Exercicio
