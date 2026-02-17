@@ -28,6 +28,9 @@ import inputValidationCode from "./Respostas/InputValidation.jsx?raw";
 import ColorPicker from "./Respostas/ColorPicker";
 import colorPickerCode from "./Respostas/ColorPicker.jsx?raw";
 
+import FontSizeController from "./Respostas/FontSizeController";
+import fontSizeControllerCode from "./Respostas/FontSizeController.jsx?raw";
+
 const StateInteratividade = () => {
     const [isFirstToggleOn, setIsFirstToggleOn] = useState(false);
     const [isOn, setIsOn] = useState(false);
@@ -175,8 +178,9 @@ ${toggleContentCode}
                         "Limite entre 10px e 50px",
                         "Dica: style={{ fontSize: `${size}px` }}"
                     ]}
+                    codigo={fontSizeControllerCode}
                 >
-
+                    <FontSizeController />
                 </Exercicio>
 
                 <Exercicio

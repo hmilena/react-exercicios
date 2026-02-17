@@ -51,3 +51,7 @@ main pre {
 .ex-colorpicker button {
     @apply rounded p-2 text-white w-30 cursor-pointer shadow-lg outline outline-black/5;
 }
+
+.fontsize-controller>button {
+    @apply border border-gray-300 bg-gray-100 p-2 rounded w-15 hover:bg-green-200 hover:border-green-600 cursor-pointer transition;
+}
