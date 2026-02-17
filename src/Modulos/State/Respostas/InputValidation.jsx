@@ -13,12 +13,16 @@ const InputValidation = ({ }) => {
 
     const handleOnBlur = (e) => {
         let value = e.target.value;
-        if (!value.includes("@")) {
-            setError("Precisa ter @!")
-        } else {
-            setError("");
-            setIsValid("Email válido.")
+
+        if (value !== "") {
+            if (!value.includes("@")) {
+                setError("Precisa ter @!")
+            } else {
+                setError("");
+                setIsValid("Email válido.")
+            }
         }
+
     }
 
     return (
@@ -29,7 +33,7 @@ const InputValidation = ({ }) => {
                 value={email}
                 onChange={handleOnchange}
                 onBlur={handleOnBlur}
-                className="h-10 py-7 px-5 bg-white rounded w-150 border border-gray-200 text-gray-700"
+                className={`h-10 py-7 px-5 bg-white rounded w-150 border border-gray-200 text-gray-700 ${error && "border-red-500"}`}
             />
             <span className={`text-xs ml-1 ${error ? "text-red-500" : "text-green-600"}`} >
                 {error || isValid}
