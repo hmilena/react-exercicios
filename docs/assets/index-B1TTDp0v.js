@@ -388,7 +388,7 @@ const ToggleContent = ({ checked, onChange, styleClasses = "", children }) => {
     );
 };
 
-export default ToggleContent;`,lO=({})=>{const[a,r]=U.useState(""),[o,l]=U.useState(""),[c,d]=U.useState(""),p=b=>{l("");let m=b.target.value;r(m)},f=b=>{b.target.value.includes("@")?(l(""),d("Email válido.")):l("Precisa ter @!")};return _.jsxs("div",{className:"flex flex-col gap-1",children:[_.jsx("label",{className:"block ml-2",htmlFor:"",children:"Digite o seu e-mail"}),_.jsx("input",{type:"email",value:a,onChange:p,onBlur:f,className:"h-10 py-7 px-5 bg-white rounded w-150 border border-gray-200 text-gray-700"}),_.jsx("span",{className:`text-xs ml-1 ${o?"text-red-500":"text-green-600"}`,children:o||c})]})},sO=`import { useState } from "react"
+export default ToggleContent;`,lO=({})=>{const[a,r]=U.useState(""),[o,l]=U.useState(""),[c,d]=U.useState(""),p=b=>{l("");let m=b.target.value;r(m)},f=b=>{let m=b.target.value;m!==""&&(m.includes("@")?(l(""),d("Email válido.")):l("Precisa ter @!"))};return _.jsxs("div",{className:"flex flex-col gap-1",children:[_.jsx("label",{className:"block ml-2",htmlFor:"",children:"Digite o seu e-mail"}),_.jsx("input",{type:"email",value:a,onChange:p,onBlur:f,className:`h-10 py-7 px-5 bg-white rounded w-150 border border-gray-200 text-gray-700 ${o&&"border-red-500"}`}),_.jsx("span",{className:`text-xs ml-1 ${o?"text-red-500":"text-green-600"}`,children:o||c})]})},sO=`import { useState } from "react"
 
 const InputValidation = ({ }) => {
     const [email, setEmail] = useState("");
@@ -403,12 +403,16 @@ const InputValidation = ({ }) => {
 
     const handleOnBlur = (e) => {
         let value = e.target.value;
-        if (!value.includes("@")) {
-            setError("Precisa ter @!")
-        } else {
-            setError("");
-            setIsValid("Email válido.")
+
+        if (value !== "") {
+            if (!value.includes("@")) {
+                setError("Precisa ter @!")
+            } else {
+                setError("");
+                setIsValid("Email válido.")
+            }
         }
+
     }
 
     return (
@@ -419,7 +423,7 @@ const InputValidation = ({ }) => {
                 value={email}
                 onChange={handleOnchange}
                 onBlur={handleOnBlur}
-                className="h-10 py-7 px-5 bg-white rounded w-150 border border-gray-200 text-gray-700"
+                className={\`h-10 py-7 px-5 bg-white rounded w-150 border border-gray-200 text-gray-700 \${error && "border-red-500"}\`}
             />
             <span className={\`text-xs ml-1 \${error ? "text-red-500" : "text-green-600"}\`} >
                 {error || isValid}
