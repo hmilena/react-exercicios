@@ -22,6 +22,9 @@ import toggleButtonCode from "./Respostas/ToggleButton.jsx?raw";
 import ToggleContent from "./Respostas/ToggleContent";
 import toggleContentCode from "./Respostas/ToggleContent.jsx?raw";
 
+import InputValidation from "./Respostas/InputValidation";
+import inputValidationCode from "./Respostas/InputValidation.jsx?raw";
+
 const StateInteratividade = () => {
     const [isFirstToggleOn, setIsFirstToggleOn] = useState(false);
     const [isOn, setIsOn] = useState(false);
@@ -140,8 +143,9 @@ ${toggleContentCode}
                         "Mensagem de sucesso se válido",
                         "Dica: email.includes('@')"
                     ]}
+                    codigo={inputValidationCode}
                 >
-
+                    <InputValidation />
                 </Exercicio>
 
                 <Exercicio
