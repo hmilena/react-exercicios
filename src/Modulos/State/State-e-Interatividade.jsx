@@ -25,6 +25,9 @@ import toggleContentCode from "./Respostas/ToggleContent.jsx?raw";
 import InputValidation from "./Respostas/InputValidation";
 import inputValidationCode from "./Respostas/InputValidation.jsx?raw";
 
+import ColorPicker from "./Respostas/ColorPicker";
+import colorPickerCode from "./Respostas/ColorPicker.jsx?raw";
+
 const StateInteratividade = () => {
     const [isFirstToggleOn, setIsFirstToggleOn] = useState(false);
     const [isOn, setIsOn] = useState(false);
@@ -150,15 +153,16 @@ ${toggleContentCode}
 
                 <Exercicio
                     titulo="Exercício 2.9: Color Picker"
-                    chamada="3 botões (Vermelho, Verde, Azul) que mudam cor de um box."
+                    chamada="Crie um componente que tenha 3 botões (Vermelho, Verde, Azul) 
+                    que mudam a cor de um box."
                     requisitos={[
                         "useState para cor atual",
                         "3 botões que setam cores diferentes",
-                        "Box com backgroundColor dinâmico",
-                        "Dica: style={{ backgroundColor: cor }}"
+                        "Box com cor de fundo dinâmico",
                     ]}
+                    codigo={colorPickerCode}
                 >
-
+                    <ColorPicker />
                 </Exercicio>
 
                 <Exercicio

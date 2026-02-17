@@ -47,3 +47,7 @@ main pre {
 .exercicio:nth-child(even) {
     @apply bg-sky-50;
 }
+
+.ex-colorpicker button {
+    @apply rounded p-2 text-white w-30 cursor-pointer shadow-lg outline outline-black/5;
+}
