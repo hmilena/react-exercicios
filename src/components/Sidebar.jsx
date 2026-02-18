@@ -5,7 +5,7 @@ import Footer from './Footer';
 const NAV_ITEMS = [
     { to: "/fundamentos", id: 1, label: "Fundamentos" },
     { to: "/state-interatividade", id: 2, label: "State e Interatividade" },
-    { to: "/renderizacao-condicional-listas", id: 3, label: "Renderização Condicional e Listas" },
+    { to: "/renderizacao-condicional", id: 3, label: "Renderização Condicional e Listas" },
     { to: "/use-effect-side-effects", id: 4, label: "useEffect e Side Effects" },
     { to: "/custom-hooks", id: 5, label: "Custom Hooks" },
     { to: "/context-api", id: 6, label: "Context API" },
