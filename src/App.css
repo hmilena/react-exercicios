@@ -55,3 +55,25 @@ main pre {
 .fontsize-controller>button {
     @apply border border-gray-300 bg-gray-100 p-2 rounded w-15 hover:bg-green-200 hover:border-green-600 cursor-pointer transition;
 }
+
+
+.multiple-input-form>div {
+    @apply flex flex-col
+}
+
+.multiple-input-form>div label {
+    @apply text-gray-600 text-sm ml-2 mb-1
+}
+
+.multiple-input-form input,
+.multiple-input-form textarea {
+    @apply border border-gray-400 rounded p-2 w-150;
+}
+
+.multiple-input-form input {
+    @apply h-10;
+}
+
+.multiple-input-form textarea {
+    @apply h-40 resize-none;
+}

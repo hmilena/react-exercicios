@@ -31,6 +31,9 @@ import colorPickerCode from "./Respostas/ColorPicker.jsx?raw";
 import FontSizeController from "./Respostas/FontSizeController";
 import fontSizeControllerCode from "./Respostas/FontSizeController.jsx?raw";
 
+import MultipleInputForm from "./Respostas/MultipleInputForm";
+import multipleInputFormCode from "./Respostas/MultipleInputForm.jsx?raw";
+
 const StateInteratividade = () => {
     const [isFirstToggleOn, setIsFirstToggleOn] = useState(false);
     const [isOn, setIsOn] = useState(false);
@@ -192,8 +195,9 @@ ${toggleContentCode}
                         "preventDefault no submit",
                         "Dica: Use um objeto para o state: {nome: '', email: '', mensagem: ''}"
                     ]}
+                    codigo={multipleInputFormCode}
                 >
-
+                    <MultipleInputForm />
                 </Exercicio>
 
                 <Exercicio
