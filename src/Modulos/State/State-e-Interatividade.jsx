@@ -34,6 +34,9 @@ import fontSizeControllerCode from "./Respostas/FontSizeController.jsx?raw";
 import MultipleInputForm from "./Respostas/MultipleInputForm";
 import multipleInputFormCode from "./Respostas/MultipleInputForm.jsx?raw";
 
+import PasswordToggle from "./Respostas/PasswordToggle";
+import passwordToggleCode from "./Respostas/PasswordToggle.jsx?raw";
+
 const StateInteratividade = () => {
     const [isFirstToggleOn, setIsFirstToggleOn] = useState(false);
     const [isOn, setIsOn] = useState(false);
@@ -209,8 +212,9 @@ ${toggleContentCode}
                         "Alterne entre password e text",
                         "Dica: type={showPassword ? 'text' : 'password'}"
                     ]}
+                    codigo={passwordToggleCode}
                 >
-
+                    <PasswordToggle />
                 </Exercicio>
 
                 <Exercicio
