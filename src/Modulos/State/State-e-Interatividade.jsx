@@ -44,6 +44,9 @@ import shoppingCartCounterCode from "./Respostas/ShoppingCartCounter.jsx?raw";
 import LikeButton from "./Respostas/LikeButton";
 import likeButtonCode from "./Respostas/LikeButton.jsx?raw";
 
+import RandomNumberGenerator from "./Respostas/RandomNumberGenerator";
+import randomNumberGeneratorCode from "./Respostas/RandomNumberGenerator.jsx?raw";
+
 const StateInteratividade = () => {
     const [isFirstToggleOn, setIsFirstToggleOn] = useState(false);
     const [isOn, setIsOn] = useState(false);
@@ -292,8 +295,9 @@ ${shoppingProductCode}
                         "Contador de quantas vezes gerou",
                         "Dica: Math.floor(Math.random() * 100) + 1"
                     ]}
+                    codigo={randomNumberGeneratorCode}
                 >
-
+                    <RandomNumberGenerator min={1} max={100} />
                 </Exercicio>
 
                 <Exercicio
