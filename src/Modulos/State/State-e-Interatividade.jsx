@@ -37,6 +37,10 @@ import multipleInputFormCode from "./Respostas/MultipleInputForm.jsx?raw";
 import PasswordToggle from "./Respostas/PasswordToggle";
 import passwordToggleCode from "./Respostas/PasswordToggle.jsx?raw";
 
+import ShoppingProduct from "./Respostas/Shopping/ShoppingProduct";
+import shoppingProductCode from "./Respostas/Shopping/ShoppingProduct.jsx?raw";
+import shoppingCartCounterCode from "./Respostas/ShoppingCartCounter.jsx?raw";
+
 const StateInteratividade = () => {
     const [isFirstToggleOn, setIsFirstToggleOn] = useState(false);
     const [isOn, setIsOn] = useState(false);
@@ -226,8 +230,40 @@ ${toggleContentCode}
                         "Exibir: Quantidade x Preço = Total",
                         "Exemplo: 3 x R$ 50,00 = R$ 150,00"
                     ]}
-                >
+                    codigo={`//shoppingCartCounterCode.jsx ${shoppingCartCounterCode} 
 
+//shoppingProductCode.jsx 
+${shoppingProductCode}
+
+//chamada
+<ShoppingProduct
+    image="https://wp.blogdamia.com.br/wp-content/uploads/2025/12/image-1766573803377-768x1024.jpg"
+    name="Dualtron Victor Luxury Plus Ultra Blaster"
+    category="Patinete"
+    price={2351}
+/>
+`}
+                >
+                    <div className="inline-flex flex-col w-150">
+                        <ShoppingProduct
+                            image="https://wp.blogdamia.com.br/wp-content/uploads/2025/12/image-1766573803377-768x1024.jpg"
+                            name="Dualtron Victor Luxury Plus"
+                            category="Patinete"
+                            price={500}
+                        />
+                        <ShoppingProduct
+                            image="https://wp.blogdamia.com.br/wp-content/uploads/2025/12/image-1766573803377-768x1024.jpg"
+                            name="Dualtron Victor Luxury Plus Ultra Blaster"
+                            category="Patinete"
+                            price={2351}
+                        />
+                        <ShoppingProduct
+                            image="https://wp.blogdamia.com.br/wp-content/uploads/2025/08/image-scaled.avif"
+                            name="Go-Go Town!"
+                            category="Game"
+                            price={30}
+                        />
+                    </div>
                 </Exercicio>
 
                 <Exercicio

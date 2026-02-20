@@ -19,13 +19,7 @@ main pre {
 }
 
 .exe-multiplo .grid>* {
-    @apply border;
-    @apply p-2;
-    @apply rounded-md;
-    @apply text-center;
-    @apply font-bold;
-    @apply border-sky-300;
-    @apply text-blue-500;
+    @apply border p-2 rounded-md text-center font-bold border-sky-300 text-blue-500;
 }
 
 .main-header {
@@ -35,6 +29,7 @@ main pre {
 .main-sidebar {
     @apply row-start-2;
 }
+
 
 .main-content {
     @apply row-start-2;
@@ -56,7 +51,6 @@ main pre {
     @apply border border-gray-300 bg-gray-100 p-2 rounded w-15 hover:bg-green-200 hover:border-green-600 cursor-pointer transition;
 }
 
-
 .multiple-input-form>div {
     @apply flex flex-col
 }
@@ -74,6 +68,27 @@ main pre {
     @apply h-10;
 }
 
+
 .multiple-input-form textarea {
     @apply h-40 resize-none;
+}
+
+.shopping-product {
+    @apply flex w-full border-b border-gray-300 p-3 gap-5;
+}
+
+.shopping-product-image {
+    @apply overflow-hidden rounded w-40 h-30;
+}
+
+.shopping-product-image img {
+    @apply object-cover;
+}
+
+.shopping-product-name {
+    @apply text-xl tracking-tight text-gray-950;
+}
+
+.shopping-product-price {
+    @apply text-lg tracking-tight text-gray-950;
 }

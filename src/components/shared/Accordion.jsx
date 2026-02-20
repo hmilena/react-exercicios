@@ -12,8 +12,10 @@ const Accordion = ({ title, titleClass, isOpenClass, spanClass, children }) => {
                 className={`w-full cursor-pointer p-2 px-0 text-left mb-0 ${isOpen && isOpenClass} ${titleClass}`}>
                 <span className={spanClass}>{title}</span>
             </button>
-            <div className={`max-h-0 overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? "max-h-screen" : ""}`}>
-                {children}
+            <div className={`grid transition-all duration-300 ease-in-out ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
+                <div className="overflow-hidden">
+                    {children}
+                </div>
             </div>
         </div>
     )
