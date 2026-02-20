@@ -41,6 +41,9 @@ import ShoppingProduct from "./Respostas/Shopping/ShoppingProduct";
 import shoppingProductCode from "./Respostas/Shopping/ShoppingProduct.jsx?raw";
 import shoppingCartCounterCode from "./Respostas/ShoppingCartCounter.jsx?raw";
 
+import LikeButton from "./Respostas/LikeButton";
+import likeButtonCode from "./Respostas/LikeButton.jsx?raw";
+
 const StateInteratividade = () => {
     const [isFirstToggleOn, setIsFirstToggleOn] = useState(false);
     const [isOn, setIsOn] = useState(false);
@@ -275,8 +278,9 @@ ${shoppingProductCode}
                         "Clique novamente remove o like (unlike)",
                         "Dica: Combine useState para count e isLiked"
                     ]}
+                    codigo={likeButtonCode}
                 >
-
+                    <LikeButton />
                 </Exercicio>
 
                 <Exercicio
