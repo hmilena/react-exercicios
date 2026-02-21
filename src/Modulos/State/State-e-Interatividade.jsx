@@ -309,7 +309,7 @@ ${shoppingProductCode}
                     requisitos={[
                         "Input para Celsius",
                         "Calcule e exiba Fahrenheit automaticamente",
-                        "Fórmula: F = (C × 9/5) + 32",
+                        "Fórmulas: F = C * 1.8 + 32 | C = (F - 32) / 1.8",
                         "Dica: Atualize quando celsius mudar"
                     ]}
                     codigo={temperatureConverterCode}
