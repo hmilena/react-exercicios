@@ -47,6 +47,9 @@ import likeButtonCode from "./Respostas/LikeButton.jsx?raw";
 import RandomNumberGenerator from "./Respostas/RandomNumberGenerator";
 import randomNumberGeneratorCode from "./Respostas/RandomNumberGenerator.jsx?raw";
 
+import TemperatureConverter from "./Respostas/TemperatureConverter";
+import temperatureConverterCode from "./Respostas/TemperatureConverter.jsx?raw";
+
 const StateInteratividade = () => {
     const [isFirstToggleOn, setIsFirstToggleOn] = useState(false);
     const [isOn, setIsOn] = useState(false);
@@ -309,8 +312,9 @@ ${shoppingProductCode}
                         "Fórmula: F = (C × 9/5) + 32",
                         "Dica: Atualize quando celsius mudar"
                     ]}
+                    codigo={temperatureConverterCode}
                 >
-
+                    <TemperatureConverter />
                 </Exercicio>
 
                 <Exercicio

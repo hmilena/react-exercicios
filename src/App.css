@@ -92,3 +92,31 @@ main pre {
 .shopping-product-price {
     @apply text-lg tracking-tight text-gray-950;
 }
+
+.temperature-converter {
+    @apply inline-flex items-center h-13 px-3 gap-3 bg-indigo-950 border border-indigo-700 rounded;
+}
+
+.temperature-converter .tc-temp-div {
+    @apply inline-flex items-center relative;
+}
+
+.temperature-converter>div:nth-child(3) .tc-temperature {
+    @apply absolute right-0;
+}
+
+.temperature-converter>div:nth-child(3) input {
+    @apply pl-2 pr-10 text-right;
+}
+
+.temperature-converter .tc-temperature {
+    @apply flex rounded-full w-8 h-8 text-white bg-indigo-700 justify-center items-center absolute;
+}
+
+.temperature-converter .tc-temp-changer {
+    @apply text-white justify-center items-center;
+}
+
+.temperature-converter input {
+    @apply h-10 w-30 p-2 pl-10 rounded bg-indigo-950 text-gray-100;
+}
