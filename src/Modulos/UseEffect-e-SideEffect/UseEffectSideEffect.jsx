@@ -1,15 +1,15 @@
+import PageMainTitle from "../../components/shared/PageMainTitle";
+import PageMainContent from "../../components/shared/PageMainContent";
+// import Exercicio from "../../components/shared/Exercicio";
+
 const UseEffectSideEffect = () => {
-    return (
-        <div className="flex flex-col gap-4 bg-white">
-            <div className="ex-title py-4 px-5 sticky top-0 bg-cyan-100 shadow-2xs z-10">
-                <h1 className="text-2xl font-bold">MÓDULO 4: useEffect e side effects</h1>
-            </div>
+  return (
+    <>
+      <PageMainTitle title="MÓDULO 4: useEffect e side effects" />
 
-            <div className="ex-content flex flex-col gap-4 px-5 pb-5">
-            </div>
-
-        </div>
-    )
-}
+      <PageMainContent></PageMainContent>
+    </>
+  );
+};
 
 export default UseEffectSideEffect;
