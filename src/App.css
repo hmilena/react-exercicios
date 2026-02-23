@@ -1,122 +1,150 @@
 @import "tailwindcss";
 
 body {
-    @apply bg-slate-100;
+  @apply bg-slate-100;
 }
 
 html,
 body,
 #root {
-    height: 100%;
+  height: 100%;
 }
 
 aside ol li a.active {
-    @apply bg-gray-200;
+  @apply bg-gray-200;
 }
 
 main pre {
-    background-color: #282c33 !important;
+  background-color: #282c33 !important;
 }
 
-.exe-multiplo .grid>* {
-    @apply border p-2 rounded-md text-center font-bold border-sky-300 text-blue-500;
+.exe-multiplo .grid > * {
+  @apply border p-2 rounded-md text-center font-bold border-sky-300 text-blue-500;
 }
 
 .main-header {
-    @apply col-span-2;
+  @apply col-span-2;
 }
 
 .main-sidebar {
-    @apply row-start-2;
+  @apply row-start-2;
 }
 
-
 .main-content {
-    @apply row-start-2;
+  @apply row-start-2;
 }
 
 .main-footer {
-    @apply col-span-2;
+  @apply col-span-2;
 }
 
 .exercicio:nth-child(even) {
-    @apply bg-sky-50;
+  @apply bg-sky-50;
 }
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  @apply border border-gray-400 rounded p-2 min-w-110 opacity-100 disabled:opacity-50;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  @apply h-10;
+}
+
+textarea {
+  @apply h-40 resize-none;
+}
+
+button.primary {
+  @apply rounded-full opacity-100 cursor-pointer transition-colors bg-sky-500 px-5 py-2 text-sm leading-5 font-semibold text-white hover:bg-sky-700 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.form-content {
+  @apply inline-flex flex-col items-start gap-3;
+}
+.btns-w-full {
+  @apply flex justify-between w-full gap-3;
+}
+
+/* exercicios */
 
 .ex-colorpicker button {
-    @apply rounded p-2 text-white w-30 cursor-pointer shadow-lg outline outline-black/5;
+  @apply rounded p-2 text-white w-30 cursor-pointer shadow-lg outline outline-black/5;
 }
 
-.fontsize-controller>button {
-    @apply border border-gray-300 bg-gray-100 p-2 rounded w-15 hover:bg-green-200 hover:border-green-600 cursor-pointer transition;
+.fontsize-controller > button {
+  @apply border border-gray-300 bg-gray-100 p-2 rounded w-15 hover:bg-green-200 hover:border-green-600 cursor-pointer transition;
 }
 
-.multiple-input-form>div {
-    @apply flex flex-col
+.multiple-input-form > div {
+  @apply flex flex-col;
 }
 
-.multiple-input-form>div label {
-    @apply text-gray-600 text-sm ml-2 mb-1
+.multiple-input-form > div label {
+  @apply text-gray-600 text-sm ml-2 mb-1;
 }
 
 .multiple-input-form input,
 .multiple-input-form textarea {
-    @apply border border-gray-400 rounded p-2 w-150;
+  @apply border border-gray-400 rounded p-2 w-150;
 }
 
 .multiple-input-form input {
-    @apply h-10;
+  @apply h-10;
 }
 
-
 .multiple-input-form textarea {
-    @apply h-40 resize-none;
+  @apply h-40 resize-none;
 }
 
 .shopping-product {
-    @apply flex w-full border-b border-gray-300 p-3 gap-5;
+  @apply flex w-full border-b border-gray-300 p-3 gap-5;
 }
 
 .shopping-product-image {
-    @apply overflow-hidden rounded w-40 h-30;
+  @apply overflow-hidden rounded w-40 h-30;
 }
 
 .shopping-product-image img {
-    @apply object-cover;
+  @apply object-cover;
 }
 
 .shopping-product-name {
-    @apply text-xl tracking-tight text-gray-950;
+  @apply text-xl tracking-tight text-gray-950;
 }
 
 .shopping-product-price {
-    @apply text-lg tracking-tight text-gray-950;
+  @apply text-lg tracking-tight text-gray-950;
 }
 
 .temperature-converter {
-    @apply inline-flex items-center h-13 px-3 gap-3 bg-indigo-950 border border-indigo-700 rounded;
+  @apply inline-flex items-center h-13 px-3 gap-3 bg-indigo-950 border border-indigo-700 rounded;
 }
 
 .temperature-converter .tc-temp-div {
-    @apply inline-flex items-center relative;
+  @apply inline-flex items-center relative;
 }
 
-.temperature-converter>div:nth-child(3) .tc-temperature {
-    @apply absolute right-0;
+.temperature-converter > div:nth-child(3) .tc-temperature {
+  @apply absolute right-0;
 }
 
-.temperature-converter>div:nth-child(3) input {
-    @apply pl-2 pr-10 text-right;
+.temperature-converter > div:nth-child(3) input {
+  @apply pl-2 pr-10 text-right;
 }
 
 .temperature-converter .tc-temperature {
-    @apply flex rounded-full w-8 h-8 text-white bg-indigo-700 justify-center items-center absolute;
+  @apply flex rounded-full w-8 h-8 text-white bg-indigo-700 justify-center items-center absolute;
 }
 
 .temperature-converter .tc-temp-changer {
-    @apply text-white justify-center items-center;
+  @apply text-white justify-center items-center;
 }
 
 .temperature-converter input {
-    @apply h-10 w-30 p-2 pl-10 rounded bg-indigo-950 text-gray-100;
+  @apply h-10 w-30 p-2 pl-10 rounded bg-indigo-950 text-gray-100;
 }

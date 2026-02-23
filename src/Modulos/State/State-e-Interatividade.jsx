@@ -52,6 +52,9 @@ import randomNumberGeneratorCode from "./Respostas/RandomNumberGenerator.jsx?raw
 import TemperatureConverter from "./Respostas/TemperatureConverter";
 import temperatureConverterCode from "./Respostas/TemperatureConverter.jsx?raw";
 
+import Wizard from "./Respostas/Wizard";
+import wizardCode from "./Respostas/Wizard.jsx?raw";
+
 const StateInteratividade = () => {
   const [isFirstToggleOn, setIsFirstToggleOn] = useState(false);
   const [isOn, setIsOn] = useState(false);
@@ -353,7 +356,10 @@ ${shoppingProductCode}
             "Exiba conteúdo diferente por step",
             "Último step mostra resumo",
           ]}
-        ></Exercicio>
+          codigo={wizardCode}
+        >
+          <Wizard />
+        </Exercicio>
 
         <Exercicio
           titulo="Exercício 2.18: Quiz Question"
