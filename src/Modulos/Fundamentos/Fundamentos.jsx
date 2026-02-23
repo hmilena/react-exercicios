@@ -44,99 +44,6 @@ import productCardCode from "./Respostas/ProductCard.jsx?raw";
 import BlogPostCard from "./Respostas/BlogPostCard";
 import blogPostCardCode from "./Respostas/BlogPostCard.jsx?raw";
 
-const requisitosGreeting = [
-  "Criar um componente chamado Greeting",
-  "Receber uma prop 'name'",
-  "Exibir 'Olá, [name]!'",
-];
-
-const requisitosProfileCard = [
-  "Receba 3 props: nome, idade, profissao",
-  "Exiba todas as informações organizadas",
-  "Use uma div com className='card'",
-];
-
-const requisitosButton = [
-  "Props: text (string), color (string)",
-  "Use a cor como className",
-  "Exiba o texto dentro do botão",
-];
-
-const requisitosAvatar = [
-  "Props: imageUrl, nome, tamanho",
-  "Exiba img com alt={nome}",
-  "Aplique className baseado no tamanho",
-  "Exemplo: avatar-small, avatar-medium, avatar-large",
-];
-
-const requisitosMultipleComponents = [
-  "Cada componente retorna JSX diferente",
-  "Organize verticalmente no App",
-  "Cada um com className próprio",
-  "Use grid para organizar os componentes",
-];
-
-const requisitosPrice = [
-  "Prop: valor (number)",
-  "Formate: R$ XX,XX  - com duas casas decimais. Ex: 100 -> R$ 100,00",
-  "Use toFixed e replace",
-];
-
-const requisitosComposition = [
-  "Props: title, description, btnText",
-  "Estruture: título em h3, descrição em p, botão em button",
-  "Aplique classes CSS adequadas",
-];
-
-const requisitosStatusBadge = [
-  "Prop: status",
-  "Cor verde para active, vermelho para inactive, amarelo para pending",
-  "Use className dinâmico: badge-active, badge-inactive, badge-pending",
-  "Dica: className={`badge badge-${status}`}",
-];
-
-const requisitosUserCard = [
-  "Crie um componente chamado UserCard",
-  "Prop: user (objeto com { nome, email, avatar, avatarSize })",
-  "Use o componente de Avatar que criamos anteriormente",
-  "O avatar deve ficar na esquerda",
-  "Nome em h3 e email em a, do lado direito",
-];
-
-const requisitosMultipleChildren = [
-  "Crie um componente MultipleChildren",
-  "Use o componente CardComposition que já criamos",
-  "Crie 5 cards com dados diferentes (pode usar array e .map)",
-  "Organize em grid",
-];
-
-const requisitosIconButton = [
-  "Props: icon, label",
-  "Exiba ícone e label lado a lado",
-  "Exemplo: 🏠 Home, ⚙️ Settings",
-];
-
-const requisitosRatingStars = [
-  "Crie um componente chamado RatingStars",
-  "Prop: rating (number)",
-  "Exiba estrelas ★ baseadas no número",
-  "Exemplo: 5 -> ★★★★★, 3 -> ★★★",
-  "Dica: use Array.from({ length: rating }).map()",
-  "Estilize o componente com Tailwind CSS",
-];
-
-const requisitosProductCard = [
-  "Props: image, name, price (usar componente que já criamos), discount (opcional)",
-  "Se tiver desconto, exiba preço riscado e novo preço",
-  "Botão 'Adicionar ao Carrinho (usar componente que já criamos)",
-];
-
-const requisitosBlogPostCard = [
-  "Props: title, author, date, sumary, tags (array), image",
-  "Exiba tags como badges",
-  "Formate data: new Date(data).toLocaleDateString('pt-BR')",
-];
-
 const Fundamentos = () => {
   return (
     <>
@@ -147,7 +54,11 @@ const Fundamentos = () => {
         <Exercicio
           titulo="Exercício 1.1: Hello Component"
           chamada="Crie um componente chamado Greeting que exibe 'Olá, Mundo!' em um h1"
-          requisitos={requisitosGreeting}
+          requisitos={[
+            "Criar um componente chamado Greeting",
+            "Receber uma prop 'name'",
+            "Exibir 'Olá, [name]!'",
+          ]}
           codigo={greetingCode}
         >
           <Greeting name="Mia" />
@@ -157,7 +68,11 @@ const Fundamentos = () => {
         <Exercicio
           titulo="Exercício 1.2: Profile Card"
           chamada="Crie um componente ProfileCard que recebe nome, idade e profissão via props e exibe em um card."
-          requisitos={requisitosProfileCard}
+          requisitos={[
+            "Receba 3 props: nome, idade, profissao",
+            "Exiba todas as informações organizadas",
+            "Use uma div com className='card'",
+          ]}
           codigo={profileCardCode}
         >
           <ProfileCard name="Mia" age="25" job="Developer" />
@@ -167,7 +82,11 @@ const Fundamentos = () => {
         <Exercicio
           titulo="Exercício 1.3: Button Component"
           chamada="Crie um componente Button que recebe 'text' e 'color' via props."
-          requisitos={requisitosButton}
+          requisitps={[
+            "Props: text (string), color (string)",
+            "Use a cor como className",
+            "Exiba o texto dentro do botão",
+          ]}
           codigo={buttonCode}
         >
           <div className="flex gap-2">
@@ -182,7 +101,12 @@ const Fundamentos = () => {
         <Exercicio
           titulo="Exercício 1.4: Avatar Component"
           chamada="Crie um componente Avatar que recebe url da imagem, nome e tamanho (small/medium/large)."
-          requisitos={requisitosAvatar}
+          requisitos={[
+            "Props: imageUrl, nome, tamanho",
+            "Exiba img com alt={nome}",
+            "Aplique className baseado no tamanho",
+            "Exemplo: avatar-small, avatar-medium, avatar-large",
+          ]}
           codigo={avatarCode}
         >
           <div className="mt-3 flex -space-x-2 items-center">
@@ -208,7 +132,12 @@ const Fundamentos = () => {
         <Exercicio
           titulo="Exercício 1.5: Multiple Components"
           chamada="Crie 4 componentes (Header, Sidebar,MainContent, Footer) e use todos no App."
-          requisitos={requisitosMultipleComponents}
+          requisitos={[
+            "Cada componente retorna JSX diferente",
+            "Organize verticalmente no App",
+            "Cada um com className próprio",
+            "Use grid para organizar os componentes",
+          ]}
           codigo={allCode}
         >
           <All />
@@ -218,7 +147,11 @@ const Fundamentos = () => {
         <Exercicio
           titulo="Exercício 1.6: Props com Números"
           chamada="Crie um componente Price que recebe valor (number) e exibe formatado com R$."
-          requisitos={requisitosPrice}
+          requisitos={[
+            "Prop: valor (number)",
+            "Formate: R$ XX,XX  - com duas casas decimais. Ex: 100 -> R$ 100,00",
+            "Use toFixed e replace",
+          ]}
           codigo={priceCode}
         >
           <Price price={100} />
@@ -228,7 +161,11 @@ const Fundamentos = () => {
         <Exercicio
           titulo="Exercício 1.7: Composição de Componentes"
           chamada="Crie um Card que recebe título, descrição e botão (todos via props)."
-          requisitos={requisitosComposition}
+          requisitos={[
+            "Props: title, description, btnText",
+            "Estruture: título em h3, descrição em p, botão em button",
+            "Aplique classes CSS adequadas",
+          ]}
           codigo={cardCompositionCode}
         >
           <CardComposition
@@ -242,7 +179,12 @@ const Fundamentos = () => {
         <Exercicio
           titulo="Exercício 1.8: Status Badge"
           chamada="Crie um componente StatusBadge que recebe 'status' (active/inactive/pending) e exibe badge colorido."
-          requisitos={requisitosStatusBadge}
+          requisitos={[
+            "Prop: status",
+            "Cor verde para active, vermelho para inactive, amarelo para pending",
+            "Use className dinâmico: badge-active, badge-inactive, badge-pending",
+            "Dica: className={`badge badge-${status}`}",
+          ]}
           codigo={statusBadgeCode}
         >
           <div className="flex gap-2">
@@ -256,7 +198,13 @@ const Fundamentos = () => {
         <Exercicio
           titulo="Exercício 1.9: Props de Objetos"
           chamada="Crie um componente UserCard que recebe um objeto 'user' com nome, email, avatar e tamanho do avatar."
-          requisitos={requisitosUserCard}
+          requisitos={[
+            "Crie um componente chamado UserCard",
+            "Prop: user (objeto com { nome, email, avatar, avatarSize })",
+            "Use o componente de Avatar que criamos anteriormente",
+            "O avatar deve ficar na esquerda",
+            "Nome em h3 e email em a, do lado direito",
+          ]}
           codigo={userCardCode}
         >
           <UserCard
@@ -274,7 +222,12 @@ const Fundamentos = () => {
         <Exercicio
           titulo="Exercício 1.10: Multiple Children"
           chamada="Crie um App que renderiza 5 Cards com dados diferentes."
-          requisitos={requisitosMultipleChildren}
+          requisitos={[
+            "Crie um componente MultipleChildren",
+            "Use o componente CardComposition que já criamos",
+            "Crie 5 cards com dados diferentes (pode usar array e .map)",
+            "Organize em grid",
+          ]}
           codigo={multipleChildrenCode}
         >
           <MultipleChildren />
@@ -284,7 +237,11 @@ const Fundamentos = () => {
         <Exercicio
           titulo="Exercício 1.11: Icon Button"
           chamada="Crie um componente IconButton que recebe icon (emoji ou texto) e label."
-          requisitos={requisitosIconButton}
+          requisitos={[
+            "Props: icon, label",
+            "Exiba ícone e label lado a lado",
+            "Exemplo: 🏠 Home, ⚙️ Settings",
+          ]}
           codigo={iconButtonCode}
         >
           <div className="inline-flex gap-4">
@@ -297,7 +254,14 @@ const Fundamentos = () => {
         <Exercicio
           titulo="Exercício 1.12: Rating Stars"
           chamada="Crie um componente Rating que recebe número (1-5) e exibe estrelas ⭐."
-          requisitos={requisitosRatingStars}
+          requisitos={[
+            "Crie um componente chamado RatingStars",
+            "Prop: rating (number)",
+            "Exiba estrelas ★ baseadas no número",
+            "Exemplo: 5 -> ★★★★★, 3 -> ★★★",
+            "Dica: use Array.from({ length: rating }).map()",
+            "Estilize o componente com Tailwind CSS",
+          ]}
           codigo={ratingStarsCode}
         >
           <div className="inline-flex flex-col gap-4">
@@ -311,7 +275,11 @@ const Fundamentos = () => {
         <Exercicio
           titulo="Exercício 1.13: Product Card"
           chamada="Crie um ProductCard completo com imagem, nome, preço, desconto e botão."
-          requisitos={requisitosProductCard}
+          requisitos={[
+            "Props: image, name, price (usar componente que já criamos), discount (opcional)",
+            "Se tiver desconto, exiba preço riscado e novo preço",
+            "Botão 'Adicionar ao Carrinho (usar componente que já criamos)",
+          ]}
           codigo={productCardCode}
         >
           <div className="grid grid-cols-2 gap-5">
@@ -333,7 +301,11 @@ const Fundamentos = () => {
         <Exercicio
           titulo="Exercício 1.15: Complex Card"
           chamada="Crie o componente BlogPostCard com title, author, date, sumary, tags e image"
-          requisitos={requisitosBlogPostCard}
+          requisitos={[
+            "Props: title, author, date, sumary, tags (array), image",
+            "Exiba tags como badges",
+            "Formate data: new Date(data).toLocaleDateString('pt-BR')",
+          ]}
           codigo={blogPostCardCode}
         >
           <div className="grid grid-cols-2 gap-5">
