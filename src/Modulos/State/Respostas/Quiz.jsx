@@ -98,7 +98,7 @@ const Quiz = () => {
       </div>
 
       {atual < questions.length - 1 && (
-        <div className="btns-w-full">
+        <div className="btns-w-full mt-5">
           {!verificado && (
             <button
               type="button"
@@ -130,7 +130,7 @@ const Quiz = () => {
       )}
 
       {atual === questions.length - 1 && (
-        <div className="btns-w-full">
+        <div className="btns-w-full mt-5">
           {!verificado && (
             <button
               type="button"
