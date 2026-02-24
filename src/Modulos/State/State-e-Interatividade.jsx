@@ -52,6 +52,9 @@ import randomNumberGeneratorCode from "./Respostas/RandomNumberGenerator.jsx?raw
 import TemperatureConverter from "./Respostas/TemperatureConverter";
 import temperatureConverterCode from "./Respostas/TemperatureConverter.jsx?raw";
 
+import Quiz from "./Respostas/Quiz";
+import quizCode from "./Respostas/Quiz.jsx?raw";
+
 import Wizard from "./Respostas/Wizard";
 import wizardCode from "./Respostas/Wizard.jsx?raw";
 
@@ -370,7 +373,10 @@ ${shoppingProductCode}
             "Botão 'Verificar' mostra se acertou",
             "useState para resposta selecionada e se mostrou resultado",
           ]}
-        ></Exercicio>
+          codigo={quizCode}
+        >
+          <Quiz />
+        </Exercicio>
 
         <Exercicio
           titulo="Exercício 2.19: Timer Simples"
