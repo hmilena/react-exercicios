@@ -58,6 +58,9 @@ import quizCode from "./Respostas/Quiz.jsx?raw";
 import Wizard from "./Respostas/Wizard";
 import wizardCode from "./Respostas/Wizard.jsx?raw";
 
+import Timer from "./Respostas/Timer";
+import timerCode from "./Respostas/Timer.jsx?raw";
+
 const StateInteratividade = () => {
   const [isFirstToggleOn, setIsFirstToggleOn] = useState(false);
   const [isOn, setIsOn] = useState(false);
@@ -388,7 +391,10 @@ ${shoppingProductCode}
             "Exibe 'Tempo esgotado!' ao chegar em 0",
             "Dica: Use setInterval dentro de uma função, não dentro do componente diretamente por enquanto",
           ]}
-        ></Exercicio>
+          codigo={timerCode}
+        >
+          <Timer />
+        </Exercicio>
 
         <Exercicio
           titulo="Exercício 2.20: Shopping List"
