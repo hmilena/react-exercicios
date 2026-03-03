@@ -2,6 +2,9 @@ import PageMainTitle from "../../components/shared/PageMainTitle";
 import PageMainContent from "../../components/shared/PageMainContent";
 import Exercicio from "../../components/shared/Exercicio";
 
+import SimpleList from "./Respostas/SimpleList";
+import simpleListCode from "./Respostas/SimpleList?raw";
+
 const RenderizacaoCondicional = () => {
   return (
     <>
@@ -16,7 +19,10 @@ const RenderizacaoCondicional = () => {
             "Use .map()",
             "Cada nome em <li> com key",
           ]}
-        ></Exercicio>
+          codigo={simpleListCode}
+        >
+          <SimpleList />
+        </Exercicio>
 
         <Exercicio
           titulo="Exercício 3.2: Product List"

@@ -75,7 +75,7 @@ button.primary {
   @apply bg-red-500 rounded p-0.5 text-white text-xl cursor-pointer;
 }
 
-ul {
+ul.the-list {
   li {
     @apply p-3;
   }
