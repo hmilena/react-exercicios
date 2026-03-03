@@ -71,6 +71,15 @@ button.primary {
 .btns-w-full {
   @apply flex justify-between w-full gap-3;
 }
+.btn-delete {
+  @apply bg-red-500 rounded p-0.5 text-white text-xl cursor-pointer;
+}
+
+ul {
+  li {
+    @apply p-3;
+  }
+}
 
 /* exercicios */
 

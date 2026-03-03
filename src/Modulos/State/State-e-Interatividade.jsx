@@ -61,6 +61,9 @@ import wizardCode from "./Respostas/Wizard.jsx?raw";
 import Timer from "./Respostas/Timer";
 import timerCode from "./Respostas/Timer.jsx?raw";
 
+import ShoppingList from "./Respostas/ShoppingList";
+import shoppingListCode from "./Respostas/ShoppingList.jsx?raw";
+
 const StateInteratividade = () => {
   const [isFirstToggleOn, setIsFirstToggleOn] = useState(false);
   const [isOn, setIsOn] = useState(false);
@@ -407,7 +410,10 @@ ${shoppingProductCode}
             "Contador de total de items",
             "Dica: Use array no state e .filter() para remover",
           ]}
-        ></Exercicio>
+          codigo={shoppingListCode}
+        >
+          <ShoppingList />
+        </Exercicio>
       </PageMainContent>
     </>
   );
