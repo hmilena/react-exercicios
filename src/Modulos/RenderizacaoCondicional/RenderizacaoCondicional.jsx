@@ -5,6 +5,12 @@ import Exercicio from "../../components/shared/Exercicio";
 import SimpleList from "./Respostas/SimpleList";
 import simpleListCode from "./Respostas/SimpleList?raw";
 
+import ProductList from "./Respostas/ProductList";
+import productListCode from "./Respostas/ProductList?raw";
+
+import ConditionalBadge from "./Respostas/ConditionalBadge";
+import conditionalBadgeCode from "./Respostas/ConditionalBadge?raw";
+
 const RenderizacaoCondicional = () => {
   return (
     <>
@@ -32,7 +38,10 @@ const RenderizacaoCondicional = () => {
             "Card para cada produto",
             "key usando id",
           ]}
-        ></Exercicio>
+          codigo={productListCode}
+        >
+          <ProductList />
+        </Exercicio>
 
         <Exercicio
           titulo="Exercício 3.3: Conditional Badge"
@@ -42,7 +51,10 @@ const RenderizacaoCondicional = () => {
             "Compare com data atual",
             "Renderize badge condicionalmente",
           ]}
-        ></Exercicio>
+          codigo={conditionalBadgeCode}
+        >
+          <ConditionalBadge />
+        </Exercicio>
 
         <Exercicio
           titulo="Exercício 3.4: Empty State"
