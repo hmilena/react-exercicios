@@ -14,6 +14,9 @@ import conditionalBadgeCode from "./Respostas/ConditionalBadge?raw";
 import EmptyState from "./Respostas/EmptyState";
 import emptyStateCode from "./Respostas/EmptyState?raw";
 
+import OddEven from "./Respostas/OddEven";
+import oddEvenCode from "./Respostas/OddEven?raw";
+
 const RenderizacaoCondicional = () => {
   return (
     <>
@@ -89,7 +92,53 @@ const RenderizacaoCondicional = () => {
             "Alterne cores",
             "Dica: className={index % 2 === 0 ? 'par' : 'impar'}",
           ]}
-        ></Exercicio>
+          codigo={oddEvenCode}
+        >
+          <OddEven
+            items={[
+              {
+                id: 1,
+                title: "Item 1",
+              },
+              {
+                id: 2,
+                title: "Item 2",
+              },
+              {
+                id: 3,
+                title: "Item 3",
+              },
+              {
+                id: 4,
+                title: "Item 4",
+              },
+              {
+                id: 5,
+                title: "Item 5",
+              },
+              {
+                id: 6,
+                title: "Item 6",
+              },
+              {
+                id: 7,
+                title: "Item 7",
+              },
+              {
+                id: 8,
+                title: "Item 8",
+              },
+              {
+                id: 9,
+                title: "Item 9",
+              },
+              {
+                id: 10,
+                title: "Item 10",
+              },
+            ]}
+          />
+        </Exercicio>
 
         <Exercicio
           titulo="Exercício 3.6: Filtered List"
