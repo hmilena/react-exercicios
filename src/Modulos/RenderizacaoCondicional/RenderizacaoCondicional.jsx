@@ -17,7 +17,38 @@ import emptyStateCode from "./Respostas/EmptyState?raw";
 import OddEven from "./Respostas/OddEven";
 import oddEvenCode from "./Respostas/OddEven?raw";
 
+import FilteredList from "./Respostas/FilteredList";
+import filteredListCode from "./Respostas/FilteredList?raw";
+
 const RenderizacaoCondicional = () => {
+  const users = [
+    {
+      id: 1,
+      name: "Mia",
+      status: "active",
+    },
+    {
+      id: 2,
+      name: "Lane",
+      status: "inactive",
+    },
+    {
+      id: 3,
+      name: "Carlos",
+      status: "active",
+    },
+    {
+      id: 4,
+      name: "Lisa",
+      status: "inactive",
+    },
+    {
+      id: 5,
+      name: "Gabriel",
+      status: "inactive",
+    },
+  ];
+
   return (
     <>
       <PageMainTitle title="MÓDULO 3: Renderização Condicional e Listas" />
@@ -148,7 +179,10 @@ const RenderizacaoCondicional = () => {
             "Filter array baseado na seleção",
             "Exiba count",
           ]}
-        ></Exercicio>
+          codigo={filteredListCode}
+        >
+          <FilteredList users={users} />
+        </Exercicio>
 
         <Exercicio
           titulo="Exercício 3.7: Student Grades"
