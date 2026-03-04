@@ -83,6 +83,22 @@ ul.the-list {
 
 /* exercicios */
 
+table {
+  @apply w-full table-fixed border-collapse text-sm;
+}
+
+table thead tr th {
+  @apply border-b border-gray-200 p-4 pt-0 pb-3 pl-8 text-left font-medium text-slate-800;
+}
+
+table tbody {
+  @apply bg-white dark:bg-gray-800;
+}
+
+table tbody tr td {
+  @apply border-b border-gray-100 p-4 pl-8 text-gray-500 dark:border-gray-700 dark:text-gray-400;
+}
+
 .ex-colorpicker button {
   @apply rounded p-2 text-white w-30 cursor-pointer shadow-lg outline outline-black/5;
 }

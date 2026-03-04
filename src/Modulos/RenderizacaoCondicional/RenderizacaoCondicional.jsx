@@ -20,6 +20,9 @@ import oddEvenCode from "./Respostas/OddEven?raw";
 import FilteredList from "./Respostas/FilteredList";
 import filteredListCode from "./Respostas/FilteredList?raw";
 
+import StudentGrade from "./Respostas/StudentGrade";
+import studentGradeCode from "./Respostas/StudentGrade?raw";
+
 const RenderizacaoCondicional = () => {
   const users = [
     {
@@ -46,6 +49,65 @@ const RenderizacaoCondicional = () => {
       id: 5,
       name: "Gabriel",
       status: "inactive",
+    },
+  ];
+
+  const students = [
+    {
+      id: 101,
+      name: "José da Silva",
+      active: true,
+      grades: [
+        {
+          subject: "português",
+          grade: 55,
+        },
+        {
+          subject: "matemática",
+          grade: 90,
+        },
+        { subject: "história", grade: 78 },
+      ],
+    },
+    {
+      id: 202,
+      name: "Maria Oliveira",
+      active: true,
+      grades: [
+        { subject: "português", grade: 92 },
+        { subject: "matemática", grade: 88 },
+        { subject: "história", grade: 95 },
+      ],
+    },
+    {
+      id: 303,
+      name: "Pedro Santos",
+      active: true,
+      grades: [
+        { subject: "português", grade: 70 },
+        { subject: "matemática", grade: 43 },
+        { subject: "história", grade: 80 },
+      ],
+    },
+    {
+      id: 404,
+      name: "Ana Maria",
+      active: true,
+      grades: [
+        { subject: "português", grade: 95 },
+        { subject: "matemática", grade: 98 },
+        { subject: "história", grade: 100 },
+      ],
+    },
+    {
+      id: 505,
+      name: "Vanderson Silva",
+      active: false,
+      grades: [
+        { subject: "português", grade: 60 },
+        { subject: "matemática", grade: 55 },
+        { subject: "história", grade: 70 },
+      ],
     },
   ];
 
@@ -192,7 +254,10 @@ const RenderizacaoCondicional = () => {
             "Cor verde se nota >= 7",
             "Vermelha se < 7",
           ]}
-        ></Exercicio>
+          codigo={studentGradeCode}
+        >
+          <StudentGrade students={students} />
+        </Exercicio>
 
         <Exercicio
           titulo="Exercício 3.8: Task List with Status"
