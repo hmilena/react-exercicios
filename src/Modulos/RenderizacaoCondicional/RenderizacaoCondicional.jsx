@@ -11,6 +11,9 @@ import productListCode from "./Respostas/ProductList?raw";
 import ConditionalBadge from "./Respostas/ConditionalBadge";
 import conditionalBadgeCode from "./Respostas/ConditionalBadge?raw";
 
+import EmptyState from "./Respostas/EmptyState";
+import emptyStateCode from "./Respostas/EmptyState?raw";
+
 const RenderizacaoCondicional = () => {
   return (
     <>
@@ -50,10 +53,15 @@ const RenderizacaoCondicional = () => {
             "Prop: dataAdicao (Date)",
             "Compare com data atual",
             "Renderize badge condicionalmente",
+            "1 segundo tem 1000 milissegundos. 1 minuto tem 60 segundos. 1 hora tem 60 minutos. 1 dia tem 24 horas.",
           ]}
           codigo={conditionalBadgeCode}
         >
-          <ConditionalBadge />
+          <div className="inline-flex flex-col gap-3">
+            <ConditionalBadge dateItWasAdded={new Date()} />
+            <ConditionalBadge dateItWasAdded={new Date("2026-03-03")} />
+            <ConditionalBadge dateItWasAdded={new Date("2022-03-03")} />
+          </div>
         </Exercicio>
 
         <Exercicio
@@ -64,7 +72,10 @@ const RenderizacaoCondicional = () => {
             "Mensagem customizada",
             "Ícone ou imagem",
           ]}
-        ></Exercicio>
+          codigo={emptyStateCode}
+        >
+          <EmptyState />
+        </Exercicio>
 
         <Exercicio
           titulo="Exercício 3.5: Odd/Even Styling"
