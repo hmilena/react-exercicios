@@ -74,7 +74,10 @@ const RenderizacaoCondicional = () => {
           ]}
           codigo={emptyStateCode}
         >
-          <EmptyState />
+          <div className="inline-flex- flex-col">
+            <EmptyState items={[]} />
+            <EmptyState items={["item 1", "item 2"]} />
+          </div>
         </Exercicio>
 
         <Exercicio
