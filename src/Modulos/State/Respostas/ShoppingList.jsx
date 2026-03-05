@@ -6,6 +6,10 @@ import EmptyState from "./../../RenderizacaoCondicional/Respostas/EmptyState";
 const ShoppingList = ({ list }) => {
   const [listItem, setListItem] = useState("");
   const [items, setItems] = useState(list);
+  const [initialPlaceholder, setInitialPlaceholder] = useState(
+    "Adicionar uma fruta",
+  );
+  const [inputError, setInputError] = useState(false);
 
   const handleOnChange = (e) => {
     const val = e.target.value;
@@ -14,8 +18,19 @@ const ShoppingList = ({ list }) => {
 
   const addItem = (e) => {
     e.preventDefault();
-    setItems([listItem, ...items]);
-    setListItem("");
+    console.log(listItem);
+    if (initialPlaceholder) {
+      setInitialPlaceholder("Não pode estar vazio");
+    }
+    if (!listItem) {
+      setInputError(true);
+    }
+    if (listItem) {
+      setInputError(false);
+      setItems([listItem, ...items]);
+      setListItem("");
+      setInitialPlaceholder("Adicionar uma fruta");
+    }
   };
 
   const removeItem = (indexParaRemover) => {
@@ -26,12 +41,16 @@ const ShoppingList = ({ list }) => {
     <div className="inline-flex flex-col gap-2">
       <h3>Frutas pra comprar</h3>
       <form className="flex gap-2">
-        <input
-          type="text"
-          placeholder="Adicione uma fruta"
-          value={listItem}
-          onChange={handleOnChange}
-        />
+        <div className="flex flex-col gap-2 pl-1">
+          <input
+            type="text"
+            placeholder={initialPlaceholder}
+            value={listItem}
+            onChange={handleOnChange}
+            className={inputError ? "border-red-500!" : ""}
+          />
+        </div>
+
         <button
           className="rounded bg-blue-600 text-white px-3 cursor-pointer text-xs"
           onClick={addItem}
