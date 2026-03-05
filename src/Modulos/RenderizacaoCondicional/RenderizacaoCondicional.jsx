@@ -23,6 +23,9 @@ import filteredListCode from "./Respostas/FilteredList?raw";
 import StudentGrade from "./Respostas/StudentGrade";
 import studentGradeCode from "./Respostas/StudentGrade?raw";
 
+import TaskList from "./Respostas/TaskList";
+import taskListCode from "./Respostas/TaskList?raw";
+
 const RenderizacaoCondicional = () => {
   const users = [
     {
@@ -108,6 +111,39 @@ const RenderizacaoCondicional = () => {
         { subject: "matemática", grade: 55 },
         { subject: "história", grade: 70 },
       ],
+    },
+  ];
+
+  const taskList = [
+    {
+      id: 1,
+      task: "Acordar",
+      isComplete: true,
+    },
+    {
+      id: 2,
+      task: "Escovar os dentes",
+      isComplete: true,
+    },
+    {
+      id: 3,
+      task: "Tomar banho",
+      isComplete: true,
+    },
+    {
+      id: 4,
+      task: "Tomar café da manhã",
+      isComplete: true,
+    },
+    {
+      id: 5,
+      task: "Alimentar Pudim",
+      isComplete: true,
+    },
+    {
+      id: 6,
+      task: "Passear Pudim",
+      isComplete: true,
     },
   ];
 
@@ -267,7 +303,10 @@ const RenderizacaoCondicional = () => {
             "Checkbox controlado",
             "Texto riscado se completa",
           ]}
-        ></Exercicio>
+          codigo={taskListCode}
+        >
+          <TaskList tasks={taskList} />
+        </Exercicio>
 
         <Exercicio
           titulo="Exercício 3.9: Search Results"

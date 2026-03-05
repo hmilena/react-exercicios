@@ -18,7 +18,6 @@ const ShoppingList = ({ list }) => {
 
   const addItem = (e) => {
     e.preventDefault();
-    console.log(listItem);
     if (initialPlaceholder) {
       setInitialPlaceholder("Não pode estar vazio");
     }
@@ -47,7 +46,7 @@ const ShoppingList = ({ list }) => {
             placeholder={initialPlaceholder}
             value={listItem}
             onChange={handleOnChange}
-            className={inputError ? "border-red-500!" : ""}
+            className={inputError ? "border-2! border-red-500!" : ""}
           />
         </div>
 
