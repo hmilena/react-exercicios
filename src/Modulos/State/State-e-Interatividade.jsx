@@ -67,6 +67,7 @@ import shoppingListCode from "./Respostas/ShoppingList.jsx?raw";
 const StateInteratividade = () => {
   const [isFirstToggleOn, setIsFirstToggleOn] = useState(false);
   const [isOn, setIsOn] = useState(false);
+  const fruits = ["Maça", "Laranja", "Melancia", "Uva"];
 
   return (
     <>
@@ -412,7 +413,7 @@ ${shoppingProductCode}
           ]}
           codigo={shoppingListCode}
         >
-          <ShoppingList />
+          <ShoppingList list={fruits} />
         </Exercicio>
       </PageMainContent>
     </>
