@@ -16,12 +16,11 @@ const TaskList = ({ tasks }) => {
         <li key={task.id}>
           <label
             htmlFor={task.id}
-            className={`cursor-pointer ${checkedIds[task.id] ? "line-through text-gray-400" : ""}`}
+            className={`flex items-center gap-3 cursor-pointer ${checkedIds[task.id] ? "line-through text-gray-400" : ""}`}
           >
             <input
               type="checkbox"
               id={task.id}
-              className="mr-3"
               checked={!!checkedIds[task.id]}
               onChange={() => handleOnChange(task.id)}
             />

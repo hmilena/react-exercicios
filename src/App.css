@@ -57,6 +57,18 @@ input[type="number"] {
   @apply h-10;
 }
 
+input[type="checkbox"] {
+  @apply appearance-none w-4 h-4 shrink-0 border border-gray-400 rounded bg-gray-100 checked:bg-blue-500 focus:outline-none transition-colors cursor-pointer;
+}
+
+input[type="checkbox"]:checked {
+  print-color-adjust: exact;
+  background-image: url("data:image/svg+xml,%3csvg aria-hidden='true' xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3e %3cpath stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M5 11.917 9.724 16.5 19 7.5'/%3e %3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+}
+
 textarea {
   @apply h-40 resize-none;
 }
