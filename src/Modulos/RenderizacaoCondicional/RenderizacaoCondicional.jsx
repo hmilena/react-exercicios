@@ -26,6 +26,9 @@ import studentGradeCode from "./Respostas/StudentGrade?raw";
 import TaskList from "./Respostas/TaskList";
 import taskListCode from "./Respostas/TaskList?raw";
 
+import SearchResult from "./Respostas/SearchResult";
+import searchResultCode from "./Respostas/SearchResult?raw";
+
 const RenderizacaoCondicional = () => {
   const users = [
     {
@@ -316,7 +319,10 @@ const RenderizacaoCondicional = () => {
             "Filter array por texto",
             "Case insensitive",
           ]}
-        ></Exercicio>
+          codigo={searchResultCode}
+        >
+          <SearchResult />
+        </Exercicio>
 
         <Exercicio
           titulo="Exercício 3.10: Pagination"

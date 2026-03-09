@@ -46,6 +46,7 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="number"],
+input[type="search"],
 textarea {
   @apply border border-gray-400 rounded p-2 min-w-110 opacity-100 disabled:opacity-50;
 }
@@ -53,7 +54,8 @@ textarea {
 input[type="text"],
 input[type="email"],
 input[type="password"],
-input[type="number"] {
+input[type="number"],
+input[type="search"] {
   @apply h-10;
 }
 
