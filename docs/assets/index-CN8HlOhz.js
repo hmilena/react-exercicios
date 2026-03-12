@@ -1517,9 +1517,8 @@ const TaskList = ({ tasks }) => {
 };
 
 export default TaskList;
-`,u0=()=>{const[a,r]=C.useState([]),[o,l]=C.useState(!1),[u,d]=C.useState(!1),[p,g]=C.useState("");C.useEffect(()=>{let E=!1;return l(!0),d(null),r([]),fetch("https://raw.githubusercontent.com/hmilena/TheWitcherAPI/refs/heads/master/data/characters.json").then(function(T){if(!T.ok)throw T.status===400||T.status===404?new Error("Nenhum personagem encontrado."):new Error(`Erro API: ${T.status}`);return T.json()}).then(T=>{E||r(Array.isArray(T)?T:[])}).catch(T=>{console.error(T),d(T.message||"Não foi possível carregar os personagens."),r([])}).finally(()=>{E||l(!1)}),()=>{E=!0}},[]);const h=E=>{E.preventDefault(),p.trim()&&g("")},m=a.filter(E=>{const S=p.toLowerCase(),T=Array.isArray(E.profession)?E.profession.join(" "):E.profession||"";return E.name?.toLowerCase().includes(S)||E.race?.toLowerCase().includes(S)||T.toLowerCase().includes(S)});return u&&!a.length?f.jsx(ds,{}):f.jsxs("div",{children:[f.jsx("h4",{children:"The Witcher API"}),f.jsx("form",{className:"mb-5",onSubmit:h,children:f.jsx("input",{type:"search",placeholder:"Procure por nome, raça ou profissão",onChange:E=>g(E.target.value)})}),f.jsx("ul",{className:"grid grid-cols-5 gap-2",children:!o&&m.map(E=>f.jsxs("li",{className:"flex items-center justify-start gap-4 p-2 bg-purple-50 border border-purple-200 rounded",children:[f.jsx("div",{className:"size-12 shrink-0 rounded-full bg-gray-950/5 outline -outline-offset-1 outline-gray-950/10 dark:outline-white/10"}),f.jsxs("div",{className:"flex flex-col truncate",children:[f.jsx("span",{className:"text-sm/6 font-medium text-gray-950 dark:text-white",children:E.name}),f.jsx("span",{className:"truncate text-sm/6 text-gray-500 dark:text-gray-400",children:Array.isArray(E.profession)?E.profession.join(", "):E.profession})]})]},E.id))})]})},c0=`import { useEffect, useState } from "react";
+`,u0=()=>{const[a,r]=C.useState([]),[o,l]=C.useState(!1),[u,d]=C.useState(!1),[p,g]=C.useState("");C.useEffect(()=>{let E=!1;return l(!0),d(null),r([]),fetch("https://raw.githubusercontent.com/hmilena/TheWitcherAPI/refs/heads/master/data/characters.json").then(function(T){if(!T.ok)throw T.status===400||T.status===404?new Error("Nenhum personagem encontrado."):new Error(`Erro API: ${T.status}`);return T.json()}).then(T=>{E||r(Array.isArray(T)?T:[])}).catch(T=>{console.error(T),d(T.message||"Não foi possível carregar os personagens."),r([])}).finally(()=>{E||l(!1)}),()=>{E=!0}},[]);const h=E=>{E.preventDefault(),p.trim()&&g("")},m=a.filter(E=>{const S=p.toLowerCase(),T=Array.isArray(E.profession)?E.profession.join(" "):E.profession||"";return E.name?.toLowerCase().includes(S)||E.race?.toLowerCase().includes(S)||T.toLowerCase().includes(S)});return u&&!a.length?f.jsx(ds,{}):f.jsxs("div",{children:[f.jsx("h4",{children:"The Witcher API"}),f.jsx("form",{className:"mb-5",onSubmit:h,children:f.jsx("input",{type:"search",placeholder:"Procure por nome, raça ou profissão",onChange:E=>g(E.target.value)})}),f.jsx("ul",{className:"grid grid-cols-5 gap-2",children:!o&&m.map(E=>f.jsxs("li",{className:"flex items-center justify-start gap-4 p-2 bg-purple-50 border border-purple-200 rounded",children:[f.jsx("div",{className:"shrink-0",children:f.jsx("img",{src:E.picture,alt:E.name,className:"size-12 shrink-0 rounded-full bg-gray-950/5 outline -outline-offset-1 outline-gray-950/10 dark:outline-white/10"})}),f.jsxs("div",{className:"flex flex-col truncate gap-0",children:[f.jsx("span",{className:"text-sm/6 font-medium text-gray-950 dark:text-white",children:E.name}),f.jsx("span",{className:"truncate text-sm/6 text-gray-500 dark:text-gray-400",children:Array.isArray(E.profession)?E.profession.join(", "):E.profession})]})]},E.id))})]})},c0=`import { useEffect, useState } from "react";
 import EmptyState from "./EmptyState";
-import { PiDivideBold } from "react-icons/pi";
 
 const SearchResult = () => {
   const [characters, setCharacters] = useState([]);
@@ -1611,8 +1610,14 @@ const SearchResult = () => {
               className="flex items-center justify-start gap-4 p-2 bg-purple-50 border border-purple-200 rounded"
               key={char.id}
             >
-              <div className="size-12 shrink-0 rounded-full bg-gray-950/5 outline -outline-offset-1 outline-gray-950/10 dark:outline-white/10"></div>
-              <div className="flex flex-col truncate">
+              <div className="shrink-0">
+                <img
+                  src={char.picture}
+                  alt={char.name}
+                  className="size-12 shrink-0 rounded-full bg-gray-950/5 outline -outline-offset-1 outline-gray-950/10 dark:outline-white/10"
+                />
+              </div>
+              <div className="flex flex-col truncate gap-0">
                 <span className="text-sm/6 font-medium text-gray-950 dark:text-white">
                   {char.name}
                 </span>
