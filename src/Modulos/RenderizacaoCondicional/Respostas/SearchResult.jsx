@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import EmptyState from "./EmptyState";
-import { PiDivideBold } from "react-icons/pi";
 
 const SearchResult = () => {
   const [characters, setCharacters] = useState([]);
@@ -92,8 +91,14 @@ const SearchResult = () => {
               className="flex items-center justify-start gap-4 p-2 bg-purple-50 border border-purple-200 rounded"
               key={char.id}
             >
-              <div className="size-12 shrink-0 rounded-full bg-gray-950/5 outline -outline-offset-1 outline-gray-950/10 dark:outline-white/10"></div>
-              <div className="flex flex-col truncate">
+              <div className="shrink-0">
+                <img
+                  src={char.picture}
+                  alt={char.name}
+                  className="size-12 shrink-0 rounded-full bg-gray-950/5 outline -outline-offset-1 outline-gray-950/10 dark:outline-white/10"
+                />
+              </div>
+              <div className="flex flex-col truncate gap-0">
                 <span className="text-sm/6 font-medium text-gray-950 dark:text-white">
                   {char.name}
                 </span>
